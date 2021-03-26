@@ -1,0 +1,148 @@
+@import "base/_variables.sass"
+
+.main-banner
+  display: flex
+  overflow: auto
+  overflow-y: hidden
+  min-height: 550px
+
+  @media(min-width: 1200px)
+    min-height: 770px
+
+  @media(min-width: 1500px)
+    min-height: 900px
+
+  @media(min-width: 1900px)
+    min-height: 1080px
+
+  &.slick-initialized
+    display: block
+
+    .main-banner__slide
+      display: flex
+      min-width: 0
+
+  &__slide
+    overflow: hidden
+    min-height: 550px
+    min-width: 100%
+    position: relative
+    vertical-align: top
+    width: 100%
+
+    @media(min-width: 768px)
+      align-items: center
+      display: flex
+
+    @media(min-width: 1200px)
+      min-height: 770px
+
+    @media(min-width: 1500px)
+      min-height: 900px
+
+    @media(min-width: 1900px)
+      min-height: 1080px
+
+  &__slide-back
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: cover
+    bottom: 0
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+
+    &.animate
+      animation: kenburns 15s ease alternate forwards
+
+  &__slide-inner
+    position: relative
+    z-index: 1
+
+    & > div
+      margin-left: auto
+      margin-right: auto
+
+  .slick-arrow
+    align-items: center
+    background-color: transparent
+    border: 3px solid #fff
+    border-radius: 50%
+    cursor: pointer
+    filter: drop-shadow(0 0 5px #fff)
+    display: flex
+    height: 74px
+    justify-content: center
+    position: absolute
+    padding: 0
+    top: 50%
+    transform: translateY(-50%)
+    width: 74px
+    z-index: 2
+
+  .slick-arrow__arrow
+    fill: none
+    height: 68px
+    stroke: #fff
+    width: 68px
+
+  .slick-prev
+    left: 2rem
+
+    @media(min-width: 1900px)
+      left: 5rem
+
+  .slick-next
+    right: 2rem
+
+    @media(min-width: 1900px)
+      right: 5rem
+
+  .slick-dots
+    align-items: center
+    bottom: 4rem
+    display: flex
+    flex-wrap: wrap
+    left: 50%
+    position: absolute
+    transform: translateX(-50%)
+    top: auto
+
+    @media(min-width: 1900px)
+      bottom: 9rem
+
+    li
+      margin: 1rem
+
+    li.slick-active
+      button
+        background-color: $main_color
+
+    button
+      background-color: rgba(#fff, 0.5)
+      border: none
+      cursor: pointer
+      display: block
+      font-size: 0
+      height: 1px
+      position: relative
+      padding: 0
+      width: 5rem
+
+      &::after
+        cursor: pointer
+        content: ''
+        height: 2rem
+        left: 0
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        width: 100%
+
+@keyframes kenburns
+  0%
+    transform: scale(1)
+
+  100%
+    transform: scale(1.15)

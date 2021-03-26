@@ -1,0 +1,301 @@
+.footer
+  flex-shrink: 0
+  position: relative
+  padding-top: 10rem
+  padding-bottom: 5rem
+  z-index: 2
+
+  @media(min-width: 768px)
+    padding-top: 4rem
+
+  @media(min-width: 1900px)
+    padding-bottom: 11.25rem
+
+  .container
+    max-width: 210rem
+
+  &__top
+    margin-bottom: 3rem
+
+    @media(min-width: 768px)
+      display: flex
+
+  &__top-left
+    margin-bottom: 2rem
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      width: 30%
+
+    @media(min-width: 1200px)
+      width: 39%
+
+  &__top-center
+    display: flex
+    margin-bottom: 2.5rem
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+
+    .footer-menu
+      &:not(:last-child)
+        padding-right: 40px
+
+  &__top-right
+    @media(min-width: 768px)
+      margin-left: auto
+
+  &__phone
+    font-size: 3.5rem
+    font-weight: 700
+    line-height: 5.25rem
+    margin-bottom: 2rem
+    white-space: nowrap
+
+    @media(min-width: 768px) and (max-width: 991px)
+      font-size: 3rem
+
+    @media(min-width: 1900px)
+      font-size: 5.25rem
+      line-height: 8rem
+
+    a
+      color: #fff
+      display: inline-block
+      transition: color 0.3s
+      text-decoration: none
+      vertical-align: top
+
+      &:hover,
+      &:focus
+        color: $main_color
+
+  &__address
+    color: #B3BFCD
+    font-size: 2rem
+    line-height: 2.75rem
+
+    @media(min-width: 768px) and (max-width: 991px)
+      font-size: 13px
+
+    @media(min-width: 1900px)
+      font-size: 3rem
+      line-height: 4rem
+
+    &:not(:last-child)
+      margin-bottom: 2rem
+
+      @media(min-width: 992px)
+        margin-bottom: 2.5rem
+
+      @media(min-width: 1900px)
+        margin-bottom: 3.5rem
+
+  &__qr
+    @media(min-width: 1900px)
+      margin-top: 8rem
+
+  &__middle
+    align-items: flex-end
+    display: flex
+    flex-wrap: wrap
+
+    @media(min-width: 768px)
+      margin-bottom: 2.5rem
+
+    @media(min-width: 992px)
+      margin-bottom: 6rem
+
+    @media(min-width: 1900px)
+      margin-bottom: 11.25rem
+
+  &__logo-block
+    @media(min-width: 768px)
+      width: 30%
+
+    @media(min-width: 1200px)
+      width: 39%
+
+  &__logo
+    left: 2rem
+    position: absolute
+    top: 2.5rem
+    width: 208px
+
+    @media(min-width: 768px)
+      left: auto
+      position: static
+      top: auto
+      width: 180px
+
+    @media(min-width: 992px)
+      width: 238px
+
+    @media(min-width: 1900px)
+      width: 355px
+
+  &__payments
+    align-items: center
+    display: flex
+    margin-right: auto
+    margin-bottom: 2.5rem
+
+    @media(min-width: 768px)
+      flex-grow: 1
+      margin-bottom: 0
+
+  &__email-block
+    margin-bottom: 2.5rem
+
+    @media(min-width: 768px)
+      margin-right: 0
+      margin-bottom: 0
+
+    @media(min-width: 1900px)
+      width: 355px
+
+    a
+      color: #fff
+      font-size: 1.75rem
+      font-weight: 700
+      text-decoration: none
+
+      &:hover,
+      &:focus
+        color: $main_color
+        text-decoration: none
+
+      @media(min-width: 768px)
+        font-size: 2.25rem
+
+      @media(min-width: 1900px)
+        font-size: 3.25rem
+
+  &__bottom
+    color: #717F8F
+    font-size: 1.5rem
+    line-height: 2.25rem
+
+    @media(min-width: 768px)
+      display: flex
+
+    @media(min-width: 1900px)
+      font-size: 2.25rem
+      line-height: 3.5rem
+
+  &__copyright
+    margin-bottom: 1rem
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      min-width: 30%
+      padding-right: 2rem
+      width: 30%
+
+    @media(min-width: 1200px)
+      width: 39%
+
+  &__note
+    max-width: 660px
+    opacity: 0.5
+
+    @media(min-width: 1900px)
+      max-width: 980px
+
+.footer-menu
+  color: #B3BFCD
+  font-size: 13px
+  line-height: 4rem
+  margin: 0
+  padding: 0
+
+  @media(min-width: 375px)
+    font-size: 2rem
+
+  @media(min-width: 768px) and (max-width: 991px)
+    font-size: 13px
+
+  @media(min-width: 992px)
+    line-height: 6rem
+
+  @media(min-width: 1900px)
+    font-size: 2.25rem
+    line-height: 7rem
+
+  &--big
+    font-size: 2rem
+    font-weight: 700
+    line-height: 4rem
+
+    @media(min-width: 992px)
+      font-size: 2.5rem
+
+    //@media(min-width: 1200px)
+      font-size: 2.75rem
+      line-height: 5.25rem
+
+    @media(min-width: 1900px)
+      font-size: 3rem
+      line-height: 8rem
+
+    .footer-menu__link
+      color: #fff
+
+      &:hover
+        color: $main_color
+        text-decoration: none
+
+  &__link
+    color: #B3BFCD
+    display: inline-block
+    transition: color 0.3s
+    text-decoration: none
+
+    &:hover
+      color: #fff
+
+.payment-system
+  align-items: center
+  border: 1px solid rgba(#717F8F, 0.2)
+  border-radius: 2px
+  display: flex
+  height: 26px
+  justify-content: center
+  width: 40px
+
+  @media(min-width: 1200px)
+    height: 40px
+    width: 60px
+
+  &:not(:last-child)
+    margin-right: 1rem
+
+    @media(min-width: 1200px)
+      margin-right: 2rem
+
+  &__icon
+    fill: #fff
+
+    &--visa
+      height: 8px
+      width: 25px
+
+      @media(min-width: 1200px)
+        height: 12px
+        width: 36px
+
+    &--ms
+      height: 12px
+      width: 20px
+
+      @media(min-width: 1200px)
+        height: 18px
+        width: 29px
+
+    &--pp
+      height: 8px
+      width: 30px
+
+      @media(min-width: 1200px)
+        height: 12px
+        width: 45px

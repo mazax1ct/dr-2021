@@ -1,0 +1,101 @@
+@import "base/_variables.sass"
+
+.actions-slider
+  &__slide
+
+
+.action-item
+  box-shadow: 0 0 10px 0 $main_color
+  border: 1px solid transparent
+  color: #fff
+  display: block
+  font-size: 1.75rem
+  line-height: 2.25rem
+  margin-left: auto
+  margin-right: auto
+  max-width: 268px
+  padding: 3rem 1rem
+  text-align: center
+  text-decoration: none
+  transition: background-color 0.3s, border-color 0.3s
+
+  @media(min-width: 768px)
+    font-size: 2rem
+    line-height: 3rem
+    max-width: 670px
+    padding: 0
+    text-align: left
+
+  &:hover
+    background-color: #071320
+    border-color: $main_color
+
+  &__content
+    display: flex
+
+    @media(min-width: 768px)
+      display: flex
+
+    &::after
+      @media(min-width: 768px)
+        content: ''
+        display: block
+        height: 0
+        padding-bottom: 48.629%
+
+  &__content-inner
+    display: block
+    min-width: 100%
+    position: relative
+
+    @media(min-width: 768px)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      padding-left: 52.37%
+      padding-right: 2rem
+      padding-top: 2rem
+      padding-bottom: 2rem
+
+  &__title,
+  &__image,
+  &__preview-text,
+  &__date
+    display: block
+
+  &__title
+    font-size: 3rem
+    font-weight: 700
+    line-height: 3.5rem
+    text-transform: uppercase
+
+    @media(min-width: 768px)
+      margin-top: auto
+      margin-bottom: 2rem
+
+  &__image
+    margin-left: -1rem
+    margin-right: -1rem
+    margin-top: -2rem
+    margin-bottom: -1rem
+    max-width: 350px
+
+    @media(min-width: 768px)
+      left: 0
+      margin: 0
+      position: absolute
+      top: 0
+      width: 52.37%
+      z-index: 1
+
+  &__preview-text
+    margin-bottom: 6rem
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+
+  &__date
+    text-align: right
+
+    @media(min-width: 768px)
+      margin-top: auto
