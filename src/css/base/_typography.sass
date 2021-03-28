@@ -17,10 +17,10 @@ a
 
 p
   margin-top: 0
-  margin-bottom: 0
+  margin-bottom: 4rem
 
-  &:not(:last-child)
-    margin-bottom: 4rem
+  &:last-child
+    margin-bottom: 0
 
 img
   display: block
@@ -150,18 +150,22 @@ ol[class]
       font-size: 2.5rem
 
     p
-      &:not(:last-child)
-        margin-bottom: 4rem
+      @media(min-width: 1900px)
+        margin-bottom: 6rem
 
-        @media(min-width: 1900px)
-          margin-bottom: 6rem
+      &:last-child
+        margin-bottom: 0
 
     &--decorated
-      @media(min-width: 1900px)
+      @media(min-width: 1200px)
         background-image: url("data:image/svg+xml,%3Csvg width='367' height='54' viewBox='0 0 367 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M294.863 27L5.99999 27' stroke='white' stroke-linejoin='round'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M338.462 47H341.539L341.539 28.5387H360V25.4618H341.539L341.539 7L338.462 7L338.462 25.4618H320V28.5387H338.462L338.462 47Z' fill='white'/%3E%3C/g%3E%3C/svg%3E")
         background-position: 100% 100%
         background-repeat: no-repeat
+        background-size: auto 5rem
         padding-bottom: 9rem
+
+      @media(min-width: 1900px)
+        background-size: auto 6rem
 
   &__title
     font-size: 2.25rem
