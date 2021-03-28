@@ -5,6 +5,9 @@ body
   font-weight: 400
   line-height: 1.5
 
+  @media(min-width: 1900px)
+    font-size: 2.25rem
+
 *
   outline: none
 
@@ -12,8 +15,26 @@ a
   color: $main_color
   transition: color 0.3s
 
+p
+  margin-top: 0
+  margin-bottom: 0
+
+  &:not(:last-child)
+    margin-bottom: 4rem
+
+img
+  display: block
+  height: auto
+  max-width: 100%
+
+ul[class],
+ol[class]
+  list-style: none
+  margin: 0
+  padding: 0
+
 .bordered-title
-  font-size: 3rem
+  font-size: 2.25rem
   font-weight: 700
   line-height: 1.25
   margin-top: 0
@@ -22,6 +43,12 @@ a
   position: relative
   text-align: center
   text-transform: uppercase
+
+  @media(min-width: 375px)
+    font-size: 2.75rem
+
+  @media(min-width: 400px)
+    font-size: 3rem
 
   @media(min-width: 1200px)
     font-size: 4.5rem
@@ -32,6 +59,7 @@ a
     letter-spacing: 2.5px
     margin-bottom: 10rem
     padding-top: 4rem
+    text-shadow: 0 0 10px $main_color
 
   &::before
     background-color: $main_color
@@ -52,8 +80,133 @@ a
       height: 3px
       width: 354px
 
-ul[class],
-ol[class]
-  list-style: none
-  margin: 0
-  padding: 0
+.text-left
+  text-align: left
+
+.text-right
+  text-align: right
+
+.text-center
+  text-align: center
+
+.text-block
+  max-width: 184rem
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 8rem
+
+  @media(min-width: 375px)
+    padding-left: 2rem
+    padding-right: 2rem
+
+  @media(min-width: 768px)
+    align-items: center
+    display: flex
+    justify-content: space-between
+    margin-bottom: 10rem
+
+  @media(min-width: 1200px)
+    justify-content: center
+
+  &--reverse
+    @media(min-width: 768px)
+      flex-direction: row-reverse
+
+    .text-block__text
+      @media(min-width: 768px)
+        padding-left: 0
+        padding-right: 4.5rem
+
+      @media(min-width: 1200px)
+        padding-right: 10rem
+
+    .text-block__text--decorated
+      @media(min-width: 1200px)
+        background-position: calc(100% - 10rem) 100%
+
+  img
+    margin-bottom: 4rem
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      min-width: 40%
+      width: 40%
+
+    @media(min-width: 1024px)
+      min-width: 42%
+      width: 42%
+
+  &__text
+    font-size: 1.75rem
+    padding-left: 4.5rem
+
+    @media(min-width: 1024px)
+      max-width: 52%
+
+    @media(min-width: 1200px)
+      padding-left: 10rem
+
+    @media(min-width: 1900px)
+      font-size: 2.5rem
+
+    p
+      &:not(:last-child)
+        margin-bottom: 4rem
+
+        @media(min-width: 1900px)
+          margin-bottom: 6rem
+
+    &--decorated
+      @media(min-width: 1900px)
+        background-image: url("data:image/svg+xml,%3Csvg width='367' height='54' viewBox='0 0 367 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M294.863 27L5.99999 27' stroke='white' stroke-linejoin='round'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M338.462 47H341.539L341.539 28.5387H360V25.4618H341.539L341.539 7L338.462 7L338.462 25.4618H320V28.5387H338.462L338.462 47Z' fill='white'/%3E%3C/g%3E%3C/svg%3E")
+        background-position: 100% 100%
+        background-repeat: no-repeat
+        padding-bottom: 9rem
+
+  &__title
+    font-size: 2.25rem
+    font-weight: 500
+    line-height: 2.75rem
+    letter-spacing: 2px
+    margin-top: 0
+    margin-bottom: 1.5rem
+    position: relative
+    text-transform: uppercase
+
+    @media(min-width: 375px)
+      font-size: 2.75rem
+      line-height: 3.5rem
+      margin-bottom: 3rem
+
+    @media(min-width: 400px)
+      font-size: 3rem
+
+    @media(min-width: 768px)
+      padding-left: 3rem
+
+    @media(min-width: 1900px)
+      font-size: 4rem
+      line-height: 6rem
+      margin-bottom: 4rem
+      padding-left: 5rem
+
+    &::before
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath fill='%23fff' d='M1,13.9V0.1L13,7L1,13.9z'/%3E%3C/svg%3E%0A")
+      background-position: 50% 50%
+      background-repeat: no-repeat
+      content: ''
+      height: 2rem
+      left: -4rem
+      position: absolute
+      top: 1.75rem
+      transform: translateY(-50%)
+      width: 2rem
+
+      @media(min-width: 768px)
+        left: 0
+
+      @media(min-width: 1900px)
+        background-size: 2.5rem 2.5rem
+        height: 2.5rem
+        top: 3rem
+        width: 2.5rem

@@ -1,4 +1,182 @@
 @import "base/_variables.sass"
 
 .sections-list
-  
+  display: flex
+  margin-left: auto
+  margin-right: auto
+  max-width: 1560px
+  overflow: auto
+  overflow-y: hidden
+
+  &.slick-initialized
+    display: block
+    overflow: visible
+
+    .actions-slider__slide
+      min-width: 0
+
+  &__item
+    display: flex
+    height: 100%
+    min-width: 100%
+    padding: 10px
+
+  .slick-track
+    display: flex
+
+  .slick-slide
+    display: flex
+    height: auto
+    justify-content: center
+
+  .slick-arrow
+    align-items: center
+    background-color: transparent
+    border: 2px solid #fff
+    border-radius: 50%
+    cursor: pointer
+    filter: drop-shadow(0 0 5px #fff)
+    display: flex
+    height: 38px
+    justify-content: center
+    position: absolute
+    padding: 0
+    top: 50%
+    transform: translateY(-50%)
+    width: 38px
+    z-index: 2
+
+    @media(min-width: 1900px)
+      height: 64px
+      width: 64px
+
+  .slick-arrow__arrow
+    fill: none
+    height: 34px
+    stroke: #fff
+    width: 34px
+
+    @media(min-width: 1900px)
+      height: 60px
+      width: 60px
+
+  .slick-prev
+    left: -1rem
+
+    @media(min-width: 1900px)
+      left: -12rem
+
+  .slick-next
+    right: -1rem
+
+    @media(min-width: 1900px)
+      right: -12rem
+
+.section-item
+  align-items: center
+  box-shadow: 0 0 10px 0 $main_color
+  border: 1px solid transparent
+  color: #fff
+  display: flex
+  flex-direction: column
+  font-size: 1.25rem
+  height: 100%
+  line-height: 2rem
+  margin-left: auto
+  margin-right: auto
+  max-width: 268px
+  padding: 2rem
+  text-align: center
+  text-decoration: none
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s
+  width: 100%
+
+  @media(min-width: 1200px)
+    border-width: 2px
+    font-size: 1.75rem
+    line-height: 2.25rem
+    max-width: 428px
+    padding: 4rem 3rem  5rem
+
+  &:hover
+    border-color: $main_color
+    box-shadow: none
+
+    .section-item__image
+      box-shadow: 0 0 20px 0 rgba($main_color, 0.5)
+
+    .section-item__button
+      box-shadow: 0 0 20px 0 rgba($main_color, 0.5)
+
+  &__image,
+  &__title,
+  &__preview-text
+    display: block
+    width: 100%
+
+  &__image
+    border-radius: 2rem
+    background: radial-gradient(51.84% 58.28% at 42.63% 71.6%, #3A3C59 0%, #0C1117 100%)
+    box-shadow: none
+    height: 0
+    margin-bottom: 1.5rem
+    overflow: hidden
+    position: relative
+    padding-bottom: 100%
+    transition: box-shadow 0.3s
+
+    @media(min-width: 1200px)
+      border-radius: 3.5rem
+      margin-bottom: 2.5rem
+
+    img
+      left: 50%
+      position: absolute
+      top: 50%
+      transform: translate(-50%, -50%)
+      z-index: 2
+
+  &__title
+    font-size: 2rem
+    font-weight: 900
+    letter-spacing: 2px
+    line-height: 1
+    margin-bottom: 1rem
+    text-transform: uppercase
+
+    @media(min-width: 1200px)
+      font-size: 3rem
+      margin-bottom: 3rem
+
+  &__preview-text
+    margin-bottom: 2rem
+
+    @media(min-width: 1200px)
+      margin-bottom: 3.75rem
+
+  &__button
+    align-items: center
+    border: 1px solid $main_color
+    box-shadow: none
+    display: inline-flex
+    font-size: 1.25rem
+    font-weight: 900
+    margin-top: auto
+    padding: 1.5rem 2rem
+    transition: box-shadow 0.3s
+
+    @media(min-width: 1200px)
+      font-size: 2.25rem
+      padding: 3rem
+
+    svg
+      fill: none
+      height: 6px
+      margin-left: 1rem
+      stroke: #fff
+      width: 28px
+
+      @media(min-width: 1200px)
+        height: 10px
+        margin-left: 2rem
+        width: 36px

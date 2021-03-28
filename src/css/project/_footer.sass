@@ -12,7 +12,8 @@
     padding-bottom: 11.25rem
 
   .container
-    max-width: 210rem
+    @media(min-width: 1900px)
+      max-width: 210rem
 
   &__top
     margin-bottom: 3rem
@@ -54,6 +55,9 @@
 
     @media(min-width: 768px) and (max-width: 991px)
       font-size: 3rem
+
+    @media(min-width: 1024px)
+      line-height: 6rem
 
     @media(min-width: 1900px)
       font-size: 5.25rem
