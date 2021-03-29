@@ -20,6 +20,10 @@ body
   &.overflow
     overflow: hidden
 
+  &.inner-page
+    @media(min-width: 992px)
+      padding-top: 160px
+
 .wrapper
   flex: 1 0 auto
 
@@ -45,3 +49,13 @@ body
   &--min
     @media(min-width: 1900px)
       min-height: 790px
+
+  &--type_1
+    background-image: url('../images/backgrounds/page-sections/pattern.png')
+    background-repeat: repeat-x
+    background-position: 50% 0
+
+  &--type_2
+    background-image: url('../images/backgrounds/page-sections/pattern.png')
+    background-repeat: repeat-x
+    background-position: 50% 100%
