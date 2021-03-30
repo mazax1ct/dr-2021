@@ -6,29 +6,33 @@
   cursor: pointer
   display: inline-flex
   font-family: inherit
-  font-size: 2rem
+  font-size: 1.5rem
   font-weight: 900
   justify-content: center
   line-height: 2.75rem
-  letter-spacing: 1px
+  letter-spacing: 0
   min-height: 48px
-  margin-top: auto
-  max-width: 310px
-  padding: 1.5rem 2rem
+  padding: 1.5rem 3rem
   text-decoration: none
   transition: background-color 0.3s
-  width: 100%
 
   &:hover,
   &:focus
-    background-color: $main_color
+    background-color: rgba($main_color, 0.5)
+
+  @media(min-width: 768px)
+    font-size: 2rem
+    line-height: 2.25rem
+    padding: 2rem 3rem
 
   @media(min-width: 1200px)
+    min-height: 56px
+    padding: 2rem 4rem
+
+  @media(min-width: 1900px)
     font-size: 2.25rem
-    letter-spacing: 0
-    line-height: 2.25rem
     min-height: 68px
-    padding: 3rem
+    padding: 3rem 6rem
 
   svg
     fill: none
