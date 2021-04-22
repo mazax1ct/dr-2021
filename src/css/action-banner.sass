@@ -1,0 +1,216 @@
+@import "base/_variables.sass"
+
+.action-banner
+  min-height: 550px
+  padding-top: 13.25rem
+  padding-bottom: 7.5rem
+
+  @media(min-width: 768px)
+    min-height: 350px
+
+  @media(min-width: 1024px)
+    min-height: 450px
+    padding-top: 20rem
+
+  @media(min-width: 1500px)
+    min-height: 550px
+
+  @media(min-width: 1900px)
+    min-height: 1080px
+    padding-bottom: 0
+
+  &__container
+    max-width: 96rem
+    margin-left: auto
+    margin-right: auto
+    padding-left: 2rem
+    padding-right: 2rem
+
+    @media(min-width: 768px)
+      padding-left: 4rem
+      padding-right: 4rem
+
+    @media(min-width: 992px)
+      max-width: 120rem
+
+    @media(min-width: 1200px)
+      max-width: 147.5rem
+      padding-left: 6rem
+      padding-right: 6rem
+
+    @media(min-width: 1400px)
+      max-width: 170rem
+      padding-left: 6rem
+      padding-right: 6rem
+
+    @media(min-width: 1900px)
+      max-width: 220rem
+
+  &__content
+    @media(min-width: 768px)
+      display: flex
+
+    &::after
+      @media(min-width: 768px)
+        content: ''
+        display: block
+        height: 0
+        padding-bottom: 50%
+
+      @media(min-width: 1900px)
+        padding-bottom: 54.087%
+
+  &__content-inner
+    min-width: 100%
+    position: relative
+    text-align: center
+
+    @media(min-width: 768px)
+      align-items: flex-start
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      //padding-right: 54.089%
+      text-align: left
+
+  &__title
+    margin-bottom: 2rem
+    position: relative
+    z-index: 2
+
+    @media(min-width: 768px)
+      margin-top: 4rem
+
+    @media(min-width: 1024px)
+      margin-bottom: 3rem
+
+    @media(min-width: 1200px)
+      margin-top: 6rem
+      margin-bottom: 4rem
+
+    @media(min-width: 1900px)
+      margin-top: 10rem
+
+    span
+      color: transparent
+      display: block
+      filter: drop-shadow(0 0 8px $main_color)
+      -webkit-text-stroke: 1px $main_color
+      text-stroke: 1px $main_color
+      font-size: 3.5rem
+      font-weight: 900
+      line-height: 1.25
+      letter-spacing: 1px
+
+      @media(min-width: 375px)
+        font-size: 4rem
+
+      @media(min-width: 1024px)
+        font-size: 5rem
+        line-height: 1.2
+
+      @media(min-width: 1200px)
+        font-size: 6rem
+        line-height: 1.16666
+
+      @media(min-width: 1400px)
+        font-size: 8rem
+
+      @media(min-width: 1900px)
+        font-size: 10rem
+        letter-spacing: 6px
+        line-height: 11rem
+
+    small
+      color: #fff
+      display: block
+      font-size: 2.75rem
+      font-weight: 900
+
+      @media(min-width: 414px)
+        font-size: 3rem
+
+      @media(min-width: 1024px)
+        font-size: 4rem
+        font-weight: 700
+
+      @media(min-width: 1900px)
+        font-size: 6rem
+        font-weight: 700
+
+  &__image
+    max-width: 900px
+    margin-left: -1.25rem
+    margin-right: -1.25rem
+    margin-bottom: 3rem
+
+    @media(min-width: 768px)
+      left: auto
+      margin: 0
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      width: 50%
+      z-index: 1
+
+    @media(min-width: 1900px)
+      width: 54.089%
+
+  &__text
+    color: #fff
+    font-size: 1.75rem
+    line-height: 1.4
+    margin-left: auto
+    margin-right: auto
+    max-width: 370px
+    position: relative
+    z-index: 1
+
+    @media(min-width: 768px)
+      font-size: 1.5rem
+      margin-left: 0
+      margin-right: 0
+
+    @media(min-width: 1200px)
+      font-size: 2rem
+      max-width: 500px
+
+    @media(min-width: 1900px)
+      font-size: 2.5rem
+      max-width: 610px
+
+    p
+      &:not(:last-child)
+        margin-bottom: 5rem
+
+        @media(min-width: 768px)
+          margin-bottom: 4rem
+
+        @media(min-width: 1900px)
+          margin-bottom: 6rem
+
+  &__btn
+    font-size: 2rem
+    line-height: 1.25
+    min-height: 6rem
+    padding: 13px 30px
+
+    @media(min-width: 768px) and (max-width: 991px)
+      font-size: 1.75rem
+      line-height: 1.28571
+      min-height: 4rem
+      padding: 5px 27px 7px
+
+    @media(min-width: 1200px)
+      font-size: 2.25rem
+      line-height: 1.11111
+      min-height: 7rem
+      padding: 17px 30px
+
+    @media(min-width: 1900px)
+      font-size: 3rem
+      font-weight: 800
+      line-height: 1.33333
+      min-height: 10rem
+      padding: 23px 48px

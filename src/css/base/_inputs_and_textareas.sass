@@ -1,31 +1,83 @@
 .input,
 .textarea
-  border: 1px solid #474747
-  border-radius: 0
-  background-color: #292929
+  border: 2px solid rgba(#fff, 0.7)
+  border-radius: 2px
+  background-color: transparent
   color: #fff
-  line-height: 19px
-  opacity: 1
-  padding: 15px 20px 16px
   transition: border-color 0.3s
   width: 100%
 
-  @media(min-width: 1200px)
-    font-size: 14px
-
-  @media(min-width: 1400px)
-    font-size: 16px
-
+  &:hover,
   &:focus
-    border-color: #666666
+    border-color: #fff
 
   &.error
     border-color: $main_color
-    color: #fff
+    color: $main_color
 
     &:focus
       border-color: $main_color
-      color: #fff
+      color: rgba($main_color, 0.3)
+
+      &::-webkit-input-placeholder
+        color: rgba($main_color, 0.3)
+
+      &::-moz-placeholder
+        color: rgba($main_color, 0.3)
+
+      &:-ms-input-placeholder
+        color: rgba($main_color, 0.3)
+
+    &::-webkit-input-placeholder
+      color: $main_color
+
+    &::-moz-placeholder
+      color: $main_color
+
+    &:-ms-input-placeholder
+      color: $main_color
+
+  &::-webkit-input-placeholder
+    color: rgba(#fff, 0.7)
+    opacity: 1
+
+  &::-moz-placeholder
+    color: rgba(#fff, 0.7)
+    opacity: 1
+
+  &:-ms-input-placeholder
+    color: rgba(#fff, 0.7)
+    opacity: 1
+
+  &:focus::-webkit-input-placeholder
+    color: rgba(#fff, 0.3)
+    opacity: 1
+
+  &:focus::-moz-placeholder
+    color: rgba(#fff, 0.3)
+    opacity: 1
+
+  &:focus:-ms-input-placeholder
+    color: rgba(#fff, 0.3)
+    opacity: 1
+
+  &:disabled,
+  &.disabled
+    border-color: rgba(#fff, 0.3)
+    cursor: default
+    pointer-events: none
+
+    &:hover
+      border-color: rgba(#fff, 0.3)
+
+    &::-webkit-input-placeholder
+      color: rgba(#fff, 0.3)
+
+    &::-moz-placeholder
+      color: rgba(#fff, 0.3)
+
+    &:-ms-input-placeholder
+      color: rgba(#fff, 0.3)
 
 input,
 textarea
@@ -33,73 +85,34 @@ textarea
     outline: 0
 
 .input
-  height: 50px
-  padding: 15px 20px 16px
+  &--small
+    font-size: 2rem
+    height: 32px
+    line-height: 1.25
+    padding: 6px 16px
+
+  &--medium
+    font-size: 2rem
+    height: 40px
+    line-height: 1.25
+    padding: 10px 16px
+
+  &--large
+    font-size: 2.25rem
+    height: 48px
+    line-height: 1.33333
+    padding: 12px 16px
 
 .textarea
-  height: 120px
-  padding: 15px 20px 16px
+  height: 15rem
+  padding: 1rem
   resize: none
 
-/*placeholder*/
-.input::-webkit-input-placeholder
-  color: rgba(#fff, 0.22)
-  opacity: 1
+  &::-webkit-input-placeholder
+    font-size: 12px
 
-.input::-moz-placeholder
-  color: rgba(#fff, 0.22)
-  opacity: 1
+  &::-moz-placeholder
+    font-size: 12px
 
-.input:-ms-input-placeholder
-  color: rgba(#fff, 0.22)
-  opacity: 1
-
-.textarea::-webkit-input-placeholder
-  color: rgba(#fff, 0.22)
-  opacity: 1
-
-.textarea::-moz-placeholder
-  color: rgba(#fff, 0.22)
-  opacity: 1
-
-.textarea:-ms-input-placeholder
-  color: rgba(#fff, 0.22)
-  opacity: 1
-
-//error
-.input.error::-webkit-input-placeholder
-  color: rgba(#fff, 0.3)
-
-.input.error::-moz-placeholder
-  color: rgba(#fff, 0.3)
-
-.input.error:-ms-input-placeholder
-  color: rgba(#fff, 0.3)
-
-.textarea.error::-webkit-input-placeholder
-  color: rgba(#fff, 0.3)
-
-.textarea.error::-moz-placeholder
-  color: rgba(#fff, 0.3)
-
-.textarea.error:-ms-input-placeholder
-  color: rgba(#fff, 0.3)
-
-/*:focus placeholder*/
-.input:focus::-webkit-input-placeholder
-  color: rgba(#fff, 0.3)
-
-.input:focus::-moz-placeholder
-  color: rgba(#fff, 0.3)
-
-.input:focus:-ms-input-placeholder
-  color: rgba(#fff, 0.3)
-
-.textarea:focus::-webkit-input-placeholder
-  color: rgba(#fff, 0.3)
-
-.textarea:focus::-moz-placeholder
-  color: rgba(#fff, 0.3)
-
-.textarea:focus:-ms-input-placeholder
-  color: rgba(#fff, 0.3)
+  &:-ms-input-placeholder
+    font-size: 12px
