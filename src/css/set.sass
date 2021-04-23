@@ -1,0 +1,183 @@
+@import "base/_variables.sass"
+
+.set
+  display: flex
+  margin-left: -2rem
+  margin-right: -2rem
+  overflow-x: auto
+  padding-left: 2rem
+  padding-right: 2rem
+  padding-bottom: 3rem
+  padding-top: 3rem
+
+  &__item
+    min-width: 344px
+    padding-left: 1rem
+    padding-right: 1rem
+    position: relative
+
+    @media(min-width: 992px)
+      display: flex
+      flex-direction: column
+      min-width: 0
+      width: 33.33333%
+
+    &--plus,
+    &--arrow
+      &::after
+        background-size: 100% auto
+        background-position: 50% 50%
+        background-repeat: no-repeat
+        content: ''
+        filter: drop-shadow(0 4px 4px $main_color)
+        left: auto
+        position: absolute
+        right: 0
+        transform: translate(50%, -50%)
+        top: 160px
+
+        @media(min-width: 1900px)
+          top: 496px
+
+    &--plus
+      .set-item
+        @media(min-width: 992px)
+          height: 100%
+
+      &::after
+        background-image: url("data:image/svg+xml,%3Csvg width='65' height='62' viewBox='0 0 65 62' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M59.0139 39.44V40.44H60.0139V39.44H59.0139ZM41.8539 39.44V38.44H40.8539V39.44H41.8539ZM41.8539 56.08V57.08H42.8539V56.08H41.8539ZM23.1339 56.08H22.1339V57.08H23.1339V56.08ZM23.1339 39.44H24.1339V38.44H23.1339V39.44ZM5.97391 39.44H4.97391V40.44H5.97391V39.44ZM5.97391 21.76V20.76H4.97391V21.76H5.97391ZM23.1339 21.76V22.76H24.1339V21.76H23.1339ZM23.1339 5.12V4.12H22.1339V5.12H23.1339ZM41.8539 5.12H42.8539V4.12H41.8539V5.12ZM41.8539 21.76H40.8539V22.76H41.8539V21.76ZM59.0139 21.76H60.0139V20.76H59.0139V21.76ZM59.0139 38.44H41.8539V40.44H59.0139V38.44ZM40.8539 39.44V56.08H42.8539V39.44H40.8539ZM41.8539 55.08H23.1339V57.08H41.8539V55.08ZM24.1339 56.08V39.44H22.1339V56.08H24.1339ZM23.1339 38.44H5.97391V40.44H23.1339V38.44ZM6.97391 39.44V21.76H4.97391V39.44H6.97391ZM5.97391 22.76H23.1339V20.76H5.97391V22.76ZM24.1339 21.76V5.12H22.1339V21.76H24.1339ZM23.1339 6.12H41.8539V4.12H23.1339V6.12ZM40.8539 5.12V21.76H42.8539V5.12H40.8539ZM41.8539 22.76H59.0139V20.76H41.8539V22.76ZM58.0139 21.76V39.44H60.0139V21.76H58.0139Z' fill='%23D43C38'/%3E%3C/svg%3E%0A")
+        height: 42px
+        width: 42px
+
+        @media(min-width: 1900px)
+          height: 64px
+          width: 64px
+
+    &--arrow
+      .set-item
+        @media(min-width: 992px)
+          height: 100%
+
+      &::after
+        background-image: url("data:image/svg+xml,%3Csvg width='80' height='48' viewBox='0 0 80 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M76 24L76.5347 24.845L77.8703 24L76.5347 23.1549L76 24ZM44.3902 43.9999H43.3902V45.816L44.9249 44.845L44.3902 43.9999ZM44.3902 4L44.9249 3.15494L43.3902 2.18393V4H44.3902ZM44.3902 12.4529V13.4529H45.3902V12.4529H44.3902ZM4 12.4529V11.4529H3V12.4529H4ZM4 35.5469H3V36.5469H4V35.5469ZM44.3902 35.5469H45.3902V34.5469H44.3902V35.5469ZM75.4653 23.1549L43.8556 43.1549L44.9249 44.845L76.5347 24.845L75.4653 23.1549ZM43.8556 4.84506L75.4653 24.845L76.5347 23.1549L44.9249 3.15494L43.8556 4.84506ZM45.3902 12.4529V4H43.3902V12.4529H45.3902ZM4 13.4529H44.3902V11.4529H4V13.4529ZM5 35.5469V12.4529H3V35.5469H5ZM44.3902 34.5469H4V36.5469H44.3902V34.5469ZM45.3902 43.9999V35.5469H43.3902V43.9999H45.3902Z' fill='%23D43C38'/%3E%3C/svg%3E%0A")
+        height: 56px
+        width: 56px
+
+        @media(min-width: 1900px)
+          height: 72px
+          width: 72px
+
+    &--result
+      .set-item
+        @media(min-width: 1900px)
+          margin-top: auto
+          margin-bottom: auto
+
+.set-item
+  background-color: $body-bg
+  box-shadow: 0 0.5rem 3rem 0 rgba($main_color, 0.5)
+  display: flex
+  flex-direction: column
+  justify-content: center
+  min-height: 38rem
+  max-width: 32rem
+  margin-left: auto
+  margin-right: auto
+  padding: 4rem 2rem 3rem
+  width: 100%
+
+  @media(min-width: 992px)
+    justify-content: flex-start
+
+  @media(min-width: 1200px)
+    max-width: 38rem
+
+  @media(min-width: 1400px)
+    max-width: 43rem
+    padding: 7rem 3rem 4rem
+
+  @media(min-width: 1900px)
+    max-width: 54rem
+    min-height: 54rem
+    padding: 7rem 3rem 4rem
+
+  &__logo
+    align-items: center
+    background-color: rgba(#fff, 0.1)
+    border-radius: 1rem
+    display: flex
+    justify-content: center
+    height: 20rem
+    padding: 2.5rem
+
+    @media(min-width: 1200px)
+      padding-left: 4rem
+      padding-right: 4rem
+
+    @media(min-width: 1900px)
+      height: 34rem
+      padding-left: 6.75rem
+      padding-right: 6.75rem
+
+  &__image
+    align-items: center
+    background-color: rgba(#fff, 0.1)
+    border-radius: 1rem
+    display: flex
+    justify-content: center
+    height: 20rem
+    overflow: hidden
+
+    @media(min-width: 1900px)
+      height: 34rem
+
+    img
+      height: 100%
+      object-fit: cover
+      object-position: right
+      width: 100%
+
+  &__list-block
+    display: none
+    padding-top: 2rem
+    padding-bottom: 2rem
+
+    @media(min-width: 992px)
+      display: block
+      padding-bottom: 0
+
+    @media(min-width: 1900px)
+      padding-top: 5rem
+
+  &__list-item
+    background-color: rgba(#fff, 0.1)
+    border-radius: 0.5rem
+    color: #fff
+    padding: 0.5rem 2rem
+    text-align: center
+
+    @media(min-width: 1900px)
+      font-size: 2.75rem
+
+    &:not(:last-child)
+      margin-bottom: 2rem
+
+  &__button
+    align-items: center
+    background-color: transparent
+    border: none
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32ZM15.36 22.3944L16.3223 23.2435L17.2847 22.3944L26.7499 14.0427C27.3523 13.5112 27.4097 12.5921 26.8782 11.9897C26.3467 11.3873 25.4276 11.3299 24.8252 11.8614L16.3223 19.3639L7.8195 11.8614C7.21714 11.3299 6.29797 11.3873 5.76647 11.9897C5.23497 12.5921 5.29242 13.5112 5.89478 14.0427L15.36 22.3944Z' fill='white'/%3E%3C/svg%3E")
+    border-radius: 50%
+    cursor: pointer
+    display: flex
+    height: 4rem
+    margin-top: auto
+    margin-left: auto
+    margin-right: auto
+    width: 4rem
+
+    @media(min-width: 992px)
+      display: none
+
+    &.is-active
+      transform: rotate(-180deg)

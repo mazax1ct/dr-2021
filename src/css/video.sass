@@ -1,13 +1,13 @@
 @import "base/_variables.sass"
 
 .video
-  box-shadow: 0 4px 24px 0 rgba($main_color, 0.5)
+  box-shadow: 0 0.5rem 3rem 0 rgba($main_color, 0.5)
   display: block
   margin-left: auto
   margin-right: auto
   overflow: hidden
   position: relative
-  max-width: 1176px
+  max-width: 160rem
 
   @media(min-width: 768px)
     width: 80%
@@ -24,21 +24,21 @@
     background-repeat: no-repeat
     background-size: 100% auto
     content: ''
-    height: 40px
+    height: 5rem
     left: 50%
     position: absolute
     top: 50%
     transform: translate(-50%, -50%)
-    width: 40px
+    width: 5rem
     z-index: 1
 
     @media(min-width: 768px)
-      height: 65px
-      width: 65px
+      height: 8rem
+      width: 8rem
 
     @media(min-width: 1900px)
-      height: 100px
-      width: 100px
+      height: 12.5rem
+      width: 12.5rem
 
   img
     transition: transform 0.3s
