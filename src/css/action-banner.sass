@@ -121,11 +121,18 @@
         letter-spacing: 6px
         line-height: 11rem
 
+      &:not(:last-child)
+        margin-bottom: 1rem
+
+        @media(min-width: 1900px)
+          margin-bottom: 4rem
+
     small
       color: #fff
       display: block
       font-size: 2.75rem
       font-weight: 900
+      line-height: 4rem
 
       @media(min-width: 414px)
         font-size: 3rem
@@ -133,13 +140,16 @@
       @media(min-width: 1024px)
         font-size: 4rem
         font-weight: 700
+        line-height: 5rem
 
       @media(min-width: 1900px)
         font-size: 6rem
         font-weight: 700
+        line-height: 7rem
 
   &__image
-    max-width: 900px
+    //max-width: 900px
+    max-width: 932px
     margin-left: -1.25rem
     margin-right: -1.25rem
     margin-bottom: 3rem
@@ -155,7 +165,8 @@
       z-index: 1
 
     @media(min-width: 1900px)
-      width: 54.089%
+      //width: 54.089%
+      width: 56.01%
 
   &__text
     color: #fff

@@ -1,0 +1,93 @@
+@import "base/_variables.sass"
+
+.compare-blocks
+  max-width: 106rem
+  margin-left: auto
+  margin-right: auto
+
+  @media(min-width: 1200px)
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+  @media(min-width: 1900px)
+    max-width: 129rem
+
+  &__column
+    @media(min-width: 1200px)
+      max-width: 50rem
+      width: 50%
+
+    @media(min-width: 1900px)
+      max-width: 62rem
+
+.compare-block
+  margin-bottom: 2.5rem
+  max-width: 62rem
+  margin-left: auto
+  margin-right: auto
+
+  &__title
+    color: rgba(#fff, 0.9)
+    font-size: 1.5rem
+    font-weight: 700
+    margin-bottom: 1rem
+
+  &__inner
+    align-items: flex-start
+    display: flex
+
+  &__image
+    border-radius: 50%
+    box-shadow: 0 0 10px 0 rgba($lightblue_color, 0.6)
+    min-width: 48px
+    overflow: hidden
+    width: 48px
+
+    @media(min-width: 1024px)
+      min-width: 72px
+      width: 72px
+
+  &__graphs
+    flex-grow: 1
+    padding-left: 2rem
+
+  &__graph-block
+    &:not(:last-child)
+      margin-bottom: 0.5rem
+
+  &__graph-title
+    font-size: 1rem
+    font-weight: 700
+    line-height: 1.5
+    margin-bottom: 0.5rem
+
+    @media(min-width: 1024px)
+      font-size: 1.5rem
+
+  &__graph
+    align-items: center
+    display: flex
+
+  &__graph-value
+    background: linear-gradient(-90deg, #40BEFF 0%, #090D11 100%)
+    border-radius: 2rem
+    flex-grow: 1
+    height: 2rem
+
+    @media(min-width: 1024px)
+      border-right: 2.5rem
+      height: 2.5rem
+
+    &--type_2
+      background: linear-gradient(-90deg, #315CB4 0%, #090D11 100%)
+
+  &__graph-units
+    color: #fff
+    font-size: 1.5rem
+    font-weight: 700
+    padding-left: 0.5rem
+
+    small
+      font-weight: 500
+      font-size: 66.66666%
