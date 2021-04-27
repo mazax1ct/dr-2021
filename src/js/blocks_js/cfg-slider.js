@@ -24,34 +24,27 @@ $(document).ready(function() {
   if($('body').width() < 1200) {
     //слайдер конфигураций
     if($('.js-cfg-slider').length) {
-      /*$('.js-cfg-slider').on('init', function(event, slick) {
-        var list = $('.js-cfg-slider').find('.slick-dots');
-        $.each(list['0'].children, function(index, value) {
-          if(index < 9) {
-            list['0'].children[index].children['0'].innerText = '0' + list['0'].children[index].children['0'].innerText;
-          }
-        });
-      });*/
-
       $('.js-cfg-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,
-        arrows: false,
+        arrows: true,
+        prevArrow: '<button class="slick-arrow slick-prev" aria-label="Назад" type="button"><svg class="slick-arrow__arrow" aria-hidden="true"><use xlink:href="#cfg_slider_prev"/></svg></button>',
+        nextArrow: '<button class="slick-arrow slick-next" aria-label="Вперед" type="button"><svg class="slick-arrow__arrow" aria-hidden="true"><use xlink:href="#cfg_slider_next"/></svg></button>',
         mobileFirst: true,
         responsive: [
           {
-            breakpoint: 767,
+            breakpoint: 1023,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 2
             }
           },
           {
-            breakpoint: 991,
+            breakpoint: 1899,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3
+              slidesToShow: 4,
+              slidesToScroll: 4
             }
           }
         ]

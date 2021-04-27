@@ -29,6 +29,16 @@
       &:active
         background-color: transparent
 
+    .request-form__form-link
+      border-color: $gold-color
+
+      &:hover,
+      &:focus
+        background-color: rgba($gold-color, 0.5)
+
+      &:active
+        background-color: transparent
+
   &__container
     max-width: 96rem
     margin-left: auto
@@ -210,7 +220,55 @@
     justify-content: center
     line-height: 1.25
     text-align: center
-    text-transform: uppercase
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s
+    text-decoration: none
+    width: 100%
+
+    @media(min-width: 768px) and (max-width: 1199px)
+      font-size: 14px
+      height: 32px
+      line-height: 18px
+
+    @media(min-width: 1900px)
+      margin-top: 4rem
+
+    &:hover,
+    &:focus,
+    &:active
+      color: #fff
+
+    &:disabled,
+    &.disabled
+      background-color: rgba(#fff, 0.2)
+      border-color: transparent
+      box-shadow: none
+      color: rgba(#fff, 0.2)
+      cursor: default
+      pointer-events: none
+
+      &:hover,
+      &:focus,
+      &:active
+        background-color: rgba(#fff, 0.2)
+        border-color: transparent
+        box-shadow: none
+        color: rgba(#fff, 0.2)
+        text-decoration: none
+
+  &__form-link
+    align-items: center
+    border: 1px solid
+    border-radius: 2px
+    color: #fff
+    cursor: pointer
+    display: flex
+    font-size: 2rem
+    font-weight: 700
+    height: 48px
+    justify-content: center
+    line-height: 1.25
+    margin-top: 2rem
+    text-align: center
     transition: background-color 0.3s, color 0.3s, border-color 0.3s
     text-decoration: none
     width: 100%
