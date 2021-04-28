@@ -39,6 +39,34 @@
       &:active
         background-color: transparent
 
+  &--type_2
+    .request-form__title
+      span
+        filter: drop-shadow(0.5px 0.5px 3px $main_color)
+        -webkit-text-stroke: 1px $main_color
+        text-stroke: 1px $main_color
+
+    .request-form__form-submit
+      background-color: $main_color
+      border-color: $main_color
+
+      &:hover,
+      &:focus
+        background-color: rgba($main_color, 0.5)
+
+      &:active
+        background-color: transparent
+
+    .request-form__form-link
+      border-color: $main_color
+
+      &:hover,
+      &:focus
+        background-color: rgba($main_color, 0.5)
+
+      &:active
+        background-color: transparent
+
   &__container
     max-width: 96rem
     margin-left: auto
@@ -197,6 +225,7 @@
 
   &__captcha
     margin-top: 3rem
+    margin-bottom: 3rem
 
   &__form-input
     font-size: 2.25rem

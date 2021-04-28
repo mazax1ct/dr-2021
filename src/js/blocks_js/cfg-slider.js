@@ -25,6 +25,7 @@ $(document).ready(function() {
     //слайдер конфигураций
     if($('.js-cfg-slider').length) {
       $('.js-cfg-slider').slick({
+        infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,

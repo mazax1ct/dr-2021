@@ -51,6 +51,9 @@
     @media(min-width: 1200px)
       max-width: 144rem
 
+    @media(min-width: 1400px)
+      max-width: 164rem
+
     @media(min-width: 1900px)
       max-width: 213rem
 
@@ -663,8 +666,14 @@
       .slick-arrow__arrow
         fill: #fff
 
+    &.slick-disabled
+      pointer-events: none
+
+      .slick-arrow__arrow
+        fill: rgba(#fff, 0.2)
+
   .slick-arrow__arrow
-    fill: rgba(#fff, 0.2)
+    fill: rgba(#fff, 0.8)
     height: 4rem
     transition: fill 0.3s
     width: 4rem
