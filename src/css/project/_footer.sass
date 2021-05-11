@@ -1,67 +1,116 @@
 .footer
   flex-shrink: 0
   position: relative
-  padding-top: 10rem
-  padding-bottom: 5rem
+  padding-top: 13.75rem
+  padding-bottom: 6rem
   z-index: 2
 
   @media(min-width: 768px)
+    padding-top: 3rem
+    padding-bottom: 8rem
+
+  @media(min-width: 1200px)
     padding-top: 4rem
+    padding-bottom: 9rem
 
   @media(min-width: 1900px)
-    padding-bottom: 11.25rem
+    padding-bottom: 10rem
 
   .container
-    @media(min-width: 1900px)
-      max-width: 210rem
+    padding-left: 3rem
+    padding-right: 3rem
 
-  &__top
-    margin-bottom: 3rem
+    @media(min-width: 375px)
+      padding-left: 5rem
+      padding-right: 5rem
 
     @media(min-width: 768px)
-      display: flex
+      padding-left: 4.25rem
+      padding-right: 4.25rem
 
-  &__top-left
+    @media(min-width: 1200px)
+      padding-left: 4.75rem
+      padding-right: 4.75rem
+
+    @media(min-width: 1900px)
+      max-width: 219rem
+
+  &__top
     margin-bottom: 2rem
 
     @media(min-width: 768px)
-      margin-bottom: 0
-      width: 30%
+      display: flex
+      margin-bottom: 3rem
 
     @media(min-width: 1200px)
-      width: 39%
+      margin-bottom: 9.25rem
+
+    @media(min-width: 1900px)
+      margin-bottom: 3rem
+
+  &__top-left
+    margin-bottom: 4rem
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      width: 36%
+
+    @media(min-width: 1200px)
+      width: 31.41666%
+
+    @media(min-width: 1900px)
+      width: 28.938%
 
   &__top-center
     display: flex
-    margin-bottom: 2.5rem
+    margin-bottom: 2rem
 
     @media(min-width: 768px)
       margin-bottom: 0
 
     .footer-menu
       &:not(:last-child)
-        padding-right: 40px
+        padding-right: 7rem
+
+        @media(min-width: 768px)
+          padding-right: 6rem
+
+        @media(min-width: 1200px)
+          padding-right: 15.75rem
 
   &__top-right
     @media(min-width: 768px)
       margin-left: auto
+      width: 178px
 
-  &__phone
-    font-size: 3.5rem
-    font-weight: 700
-    line-height: 5.25rem
-    margin-bottom: 2rem
-    white-space: nowrap
-
-    @media(min-width: 768px) and (max-width: 991px)
-      font-size: 3rem
-
-    @media(min-width: 1024px)
-      line-height: 6rem
+    @media(min-width: 1200px)
+      width: 296px
 
     @media(min-width: 1900px)
-      font-size: 5.25rem
-      line-height: 8rem
+      width: 360px
+
+  &__phone
+    font-size: 3rem
+    font-weight: 700
+    line-height: 1.33333
+    margin-bottom: 2rem
+    white-space: nowrap
+    text-align: center
+
+    @media(min-width: 768px)
+      font-size: 2.5rem
+      line-height: 1.2
+      text-align: left
+
+    @media(min-width: 1200px)
+      font-size: 4rem
+      line-height: 1.5
+      margin-bottom: 3rem
+
+    @media(min-width: 1900px)
+      font-size: 5rem
+      line-height: 1.2
+      margin-bottom: 4rem
 
     a
       color: #fff
@@ -75,210 +124,277 @@
         color: $main_color
 
   &__address
-    color: #B3BFCD
-    font-size: 2rem
-    line-height: 2.75rem
+    color: #fff
+    font-size: 1.5rem
+    line-height: 1.33333
+    text-align: center
 
-    @media(min-width: 768px) and (max-width: 991px)
-      font-size: 13px
+    @media(min-width: 768px)
+      text-align: left
+
+    @media(min-width: 1200px)
+      font-size: 2.5rem
+      line-height: 1.2
 
     @media(min-width: 1900px)
       font-size: 3rem
-      line-height: 4rem
+      line-height: 1.16666
 
     &:not(:last-child)
       margin-bottom: 2rem
 
-      @media(min-width: 992px)
-        margin-bottom: 2.5rem
+      @media(min-width: 1200px)
+        margin-bottom: 3rem
 
       @media(min-width: 1900px)
-        margin-bottom: 3.5rem
+        margin-bottom: 4rem
 
   &__qr
-    @media(min-width: 1900px)
-      margin-top: 8rem
-
-    img
-      max-width: 100px
-
-  &__middle
-    align-items: flex-end
-    display: flex
-    flex-wrap: wrap
+    display: none
 
     @media(min-width: 768px)
-      margin-bottom: 2.5rem
+      display: block
+      margin-top: 3rem
+      width: 50px
 
-    @media(min-width: 992px)
-      margin-bottom: 6rem
+    @media(min-width: 1200px)
+      margin-top: 5.5rem
+      width: 100px
 
     @media(min-width: 1900px)
-      margin-bottom: 11.25rem
+      margin-top: 9rem
+
+  &__middle
+    border-bottom: 1px solid rgba(#fff, 0.2)
+    display: flex
+    flex-direction: column
+    margin-left: -5rem
+    margin-right: -5rem
+    padding-left: 5rem
+    padding-right: 5rem
+    padding-bottom: 2rem
+
+    @media(min-width: 768px)
+      align-items: flex-end
+      border-bottom: none
+      flex-direction: row
+      margin-bottom: 3rem
+      margin-left: 0
+      margin-right: 0
+      padding-left: 0
+      padding-right: 0
+      padding-bottom: 0
+
+    @media(min-width: 1200px)
+      margin-bottom: 13rem
+
+    @media(min-width: 1900px)
+      margin-bottom: 12rem
 
   &__logo-block
     @media(min-width: 768px)
-      width: 30%
+      width: 36%
 
     @media(min-width: 1200px)
-      width: 39%
+      width: 31.41666%
+
+    @media(min-width: 1900px)
+      width: 28.938%
 
   &__logo
-    left: 2rem
+    left: 3rem
     position: absolute
-    top: 2.5rem
-    width: 208px
+    top: 4rem
+    width: 234px
+
+    @media(min-width: 375px)
+      left: 5rem
 
     @media(min-width: 768px)
       left: auto
       position: static
       top: auto
-      width: 180px
+      width: 204px
 
-    @media(min-width: 992px)
-      width: 238px
+    @media(min-width: 1200px)
+      width: 234px
 
     @media(min-width: 1900px)
-      width: 355px
+      width: 352px
 
   &__payments
     align-items: center
     display: flex
-    margin-right: auto
-    margin-bottom: 2.5rem
+    justify-content: center
 
     @media(min-width: 768px)
       flex-grow: 1
-      margin-bottom: 0
+      justify-content: flex-start
 
   &__email-block
-    margin-bottom: 2.5rem
+    font-size: 2.5rem
+    font-weight: 700
+    line-height: 1.2
+    margin-bottom: 2.25rem
+    order: -1
+    text-align: center
 
     @media(min-width: 768px)
+      font-size: 1.5rem
+      line-height: 1.66666
       margin-right: 0
       margin-bottom: 0
+      order: 0
+      text-align: left
+      width: 178px
+
+    @media(min-width: 1200px)
+      font-size: 3rem
+      line-height: 1.16666
+      width: 296px
 
     @media(min-width: 1900px)
-      width: 355px
+      width: 360px
 
     a
-      color: #fff
-      font-size: 1.75rem
-      font-weight: 700
+      color: $main_color
+
       text-decoration: none
 
       &:hover,
       &:focus
-        color: $main_color
+        color: #fff
         text-decoration: none
 
-      @media(min-width: 768px)
-        font-size: 2.25rem
-
-      @media(min-width: 1900px)
-        font-size: 3.25rem
-
   &__bottom
-    color: #717F8F
+    color: rgba(#fff, 0.4)
     font-size: 1.5rem
-    line-height: 2.25rem
+    line-height: 1.33333
+    padding-top: 2.25rem
+    text-align: center
 
     @media(min-width: 768px)
       display: flex
+      padding-top: 0
+      text-align: left
 
-    @media(min-width: 1900px)
+    @media(min-width: 1200px)
       font-size: 2.25rem
-      line-height: 3.5rem
 
   &__copyright
-    margin-bottom: 1rem
+    margin-bottom: 2rem
 
     @media(min-width: 768px)
       margin-bottom: 0
-      min-width: 30%
+      min-width: 36%
       padding-right: 2rem
-      width: 30%
+      width: 36%
 
     @media(min-width: 1200px)
-      width: 39%
+      line-height: 1.22222
+      min-width: 31.41666%
+      width: 31.41666%
+
+    @media(min-width: 1900px)
+      min-width: 28.938%
+      width: 28.938%
 
   &__note
     max-width: 660px
-    opacity: 0.5
+
+    @media(min-width: 1200px)
+      line-height: 1.44444
 
     @media(min-width: 1900px)
-      max-width: 980px
+      max-width: 860px
 
 .footer-menu
-  color: #B3BFCD
-  font-size: 13px
-  line-height: 4rem
+  font-size: 1.5rem
+  line-height: 1.33333
   margin: 0
   padding: 0
 
-  @media(min-width: 375px)
+  @media(min-width: 768px)
+    font-size: 1.5rem
+    line-height: 1.33333
+
+  @media(min-width: 1200px)
     font-size: 2rem
-
-  @media(min-width: 768px) and (max-width: 991px)
-    font-size: 13px
-
-  @media(min-width: 992px)
-    line-height: 6rem
+    line-height: 1.5
 
   @media(min-width: 1900px)
     font-size: 2.25rem
-    line-height: 7rem
+    line-height: 1.3333
 
   &--big
     font-size: 2rem
     font-weight: 700
-    line-height: 4rem
+    line-height: 1.5
 
-    @media(min-width: 992px)
-      font-size: 2.5rem
+    @media(min-width: 768px)
+      font-size: 2.25rem
+      line-height: 1.25
 
-    //@media(min-width: 1200px)
-      font-size: 2.75rem
-      line-height: 5.25rem
+    @media(min-width: 1200px)
+      font-size: 2.25rem
+      line-height: 1.33333
 
     @media(min-width: 1900px)
       font-size: 3rem
-      line-height: 8rem
+      line-height: 1.33333
+
+    .footer-menu__item
+      &:not(:last-child)
+        @media(min-width: 1200px)
+          margin-bottom: 3rem
+
+        @media(min-width: 1900px)
+          margin-bottom: 3rem
 
     .footer-menu__link
       color: #fff
 
-      &:hover
+      &:hover,
+      &:focus,
+      &:active
         color: $main_color
         text-decoration: none
 
+  &__item
+    &:not(:last-child)
+      margin-bottom: 2rem
+
+      @media(min-width: 1900px)
+        margin-bottom: 2.25rem
+
   &__link
-    color: #B3BFCD
+    color: rgba(#fff, 0.8)
     display: inline-block
     transition: color 0.3s
     text-decoration: none
 
-    &:hover
+    &:hover,
+    &:focus
       color: #fff
+
+    &:active
+      color: $main_color
 
 .payment-system
   align-items: center
-  border: 1px solid rgba(#717F8F, 0.2)
+  border: 1px solid rgba(#fff, 0.2)
   border-radius: 2px
   display: flex
-  height: 26px
+  height: 4rem
   justify-content: center
-  width: 40px
+  width: 6rem
 
   @media(min-width: 1200px)
-    height: 40px
-    width: 60px
+    height: 5rem
+    width: 8rem
 
   &:not(:last-child)
-    margin-right: 1rem
-
-    @media(min-width: 1200px)
-      margin-right: 2rem
+    margin-right: 2rem
 
   &__icon
     fill: #fff
