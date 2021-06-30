@@ -67,6 +67,39 @@
       &:active
         background-color: transparent
 
+  &--type_3
+    .request-form__title
+      span
+        filter: drop-shadow(0.5px 0.5px 3px #3B81EA)
+        -webkit-text-stroke: 1px #3B81EA
+        text-stroke: 1px #3B81EA
+
+    .request-form__form-submit
+      background-color: rgba(#3B81EA, 0.8)
+      border-color: #3B81EA
+      border-width: 2px
+
+      &:hover,
+      &:focus
+        background-color: #3B81EA
+        border-color: #3B81EA
+
+      &:active
+        background-color: transparent
+
+    .request-form__form-link
+      border-color: transparent
+      background-color: #3B81EA
+      border-width: 2px
+
+      &:hover,
+      &:focus
+        background-color: rgba(#3B81EA, 0.8)
+
+      &:active
+        background-color: transparent
+        border-color: #3B81EA
+
   &__container
     max-width: 96rem
     margin-left: auto
@@ -90,6 +123,9 @@
     @media(min-width: 1900px)
       max-width: 220rem
 
+    @media(min-width: 2500px)
+      max-width: 280rem
+
   &__content
     @media(min-width: 768px)
       display: flex
@@ -102,7 +138,7 @@
         padding-bottom: 56.25%
 
       @media(min-width: 1900px)
-        padding-bottom: 61.364%
+        padding-bottom: 64.2864%
 
   &__content-inner
     min-width: 100%
@@ -159,7 +195,7 @@
         font-size: 10rem
 
   &__image
-    max-width: 1080px
+    max-width: 1440px
     margin-left: -2rem
     margin-right: -2rem
     margin-bottom: 1rem
@@ -176,6 +212,9 @@
 
     @media(min-width: 1900px)
       width: 61.364%
+
+    @media(min-width: 2500px)
+      width: 64.2864%
 
   &__form-block
     @media(min-width: 768px)
@@ -223,6 +262,10 @@
     @media(min-width: 1900px)
       margin-top: 3rem
 
+    @media(min-width: 2500px)
+      margin-top: 6rem
+      margin-bottom: 6rem
+
   &__captcha
     margin-top: 3rem
     margin-bottom: 3rem
@@ -251,6 +294,7 @@
     height: 48px
     justify-content: center
     line-height: 1.25
+    margin-top: 1rem
     text-align: center
     transition: background-color 0.3s, color 0.3s, border-color 0.3s
     text-decoration: none
@@ -261,8 +305,14 @@
       height: 32px
       line-height: 18px
 
+    @media(min-width: 768px)
+      margin-top: 1.5rem
+
+    @media(min-width: 1024px)
+      margin-top: 2rem
+
     @media(min-width: 1900px)
-      margin-top: 4rem
+      margin-top: 3rem
 
     &:hover,
     &:focus,
