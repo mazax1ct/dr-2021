@@ -1,0 +1,722 @@
+@import "base/_variables.sass"
+
+.quiz-popup
+  background: linear-gradient(106.89deg, rgba(87, 147, 234, 0.35) -0.5%, rgba(0, 0, 0, 0) 51.95%, rgba(87, 147, 234, 0.35) 100%), #020405
+  box-sizing: border-box
+  color: $text-color
+  display: none
+  font-family: $main_font
+  font-size: 2 * $base_size
+  font-weight: 400
+  height: 100%
+  line-height: 1.5
+  padding: 0 !important
+  width: 100%
+
+  @media(min-width: 1900px)
+    font-size: 2.25 * $base_size
+
+  &.fancybox-content
+    display: inline-flex !important
+    justify-content: center
+
+  *,
+  *::after,
+  *::before
+    box-sizing: inherit
+
+  input,
+  textarea,
+  button
+    font-family: $main_font
+
+  img
+    display: block
+    height: auto
+    max-width: 100%
+
+.quiz-banner
+  padding-top: 13.25 * $base_size
+  padding-bottom: 7.5 * $base_size
+  width: 100%
+
+  @media(min-width: 768px)
+    padding-top: 7.5 * $base_size
+    padding-bottom: 7.5 * $base_size
+
+  @media(min-width: 1024px)
+    padding-top: 20 * $base_size
+
+  @media(min-width: 1900px)
+    padding-bottom: 0
+
+  @media(min-width: 2500px)
+    padding-top: 32.25 * $base_size
+
+  &__container
+    max-width: 96 * $base_size
+    margin-left: auto
+    margin-right: auto
+    padding-left: 2 * $base_size
+    padding-right: 2 * $base_size
+
+    @media(min-width: 768px)
+      padding-left: 4 * $base_size
+      padding-right: 4 * $base_size
+
+    @media(min-width: 992px)
+      max-width: 120 * $base_size
+
+    @media(min-width: 1200px)
+      max-width: 147.5 * $base_size
+      padding-left: 6 * $base_size
+      padding-right: 6 * $base_size
+
+    @media(min-width: 1400px)
+      max-width: 170 * $base_size
+      padding-left: 6 * $base_size
+      padding-right: 6 * $base_size
+
+    @media(min-width: 1900px)
+      max-width: 220 * $base_size
+
+    @media(min-width: 2500px)
+      max-width: 280 * $base_size
+      padding-left: 8 * $base_size
+      padding-right: 8 * $base_size
+
+  &__content
+    @media(min-width: 768px)
+      display: flex
+
+    &::after
+      @media(min-width: 768px)
+        content: ''
+        display: block
+        height: 0
+        padding-bottom: 50%
+
+      @media(min-width: 1900px)
+        padding-bottom: 54.087%
+
+  &__content-inner
+    min-width: 100%
+    position: relative
+    text-align: center
+
+    @media(min-width: 768px)
+      align-items: flex-start
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      text-align: left
+
+  &__title
+    color: transparent
+    display: block
+    filter: drop-shadow(0 0 8px $gold-color)
+    -webkit-text-stroke: 1px $gold-color
+    text-stroke: 1px $gold-color
+    font-size: 3.5 * $base_size
+    font-weight: 900
+    line-height: 1.25
+    letter-spacing: 1px
+    margin-bottom: 2 * $base_size
+    position: relative
+    z-index: 2
+
+    @media(min-width: 375px)
+      font-size: 4 * $base_size
+
+    @media(min-width: 1024px)
+      font-size: 5 * $base_size
+      line-height: 1.2
+      margin-bottom: 3 * $base_size
+
+    @media(min-width: 1200px)
+      font-size: 6 * $base_size
+      line-height: 1.16666
+      margin-bottom: 4 * $base_size
+
+    @media(min-width: 1400px)
+      font-size: 8 * $base_size
+
+    @media(min-width: 1900px)
+      font-size: 10 * $base_size
+      letter-spacing: 6px
+      line-height: 1.1
+
+  &__image
+    max-width: 932px
+    margin-left: -1.25 * $base_size
+    margin-right: -1.25 * $base_size
+    margin-bottom: 3 * $base_size
+
+    @media(min-width: 768px)
+      left: auto
+      margin: 0
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      width: 50%
+      z-index: 1
+
+    @media(min-width: 1900px)
+      width: 56.01%
+
+    @media(min-width: 2500px)
+      max-width: 1180px
+
+  &__text
+    color: #fff
+    font-size: 1.75 * $base_size
+    line-height: 1.4
+    margin-left: auto
+    margin-right: auto
+    max-width: 370px
+    position: relative
+    z-index: 1
+
+    @media(min-width: 768px)
+      font-size: 1.5 * $base_size
+      margin-left: 0
+      margin-right: 0
+
+    @media(min-width: 1200px)
+      font-size: 2 * $base_size
+      max-width: 500px
+
+    @media(min-width: 1900px)
+      font-size: 2.5 * $base_size
+      max-width: 610px
+
+    @media(min-width: 2500px)
+      font-size: 3 * $base_size
+
+    p
+      &:not(:last-child)
+        margin-bottom: 5 * $base_size
+
+        @media(min-width: 768px)
+          margin-bottom: 4 * $base_size
+
+        @media(min-width: 1900px)
+          margin-bottom: 6 * $base_size
+
+        @media(min-width: 2500px)
+          margin-bottom: 7 * $base_size
+
+  &__btn
+    align-items: center
+    background: linear-gradient(180deg, #FBA980 0%, #F7CB6B 100%)
+    box-shadow: 0px 0px 12px rgba(247, 203, 107, 0.3)
+    border: none
+    border-radius: 2px
+    color: #020405
+    cursor: pointer
+    display: inline-flex
+    font-size: 2 * $base_size
+    font-weight: 700
+    justify-content: center
+    line-height: 1.25
+    min-height: 6 * $base_size
+    text-decoration: none
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s
+    vertical-align: top
+
+    @media(min-width: 768px) and (max-width: 991px)
+      font-size: 1.75 * $base_size
+      line-height: 1.28571
+      min-height: 4 * $base_size
+      padding: 5px 27px 7px
+
+    @media(min-width: 1200px)
+      font-size: 2.25 * $base_size
+      line-height: 1.11111
+      min-height: 7 * $base_size
+      padding: 17px 30px
+
+    @media(min-width: 1900px)
+      font-size: 3 * $base_size
+      font-weight: 800
+      line-height: 1.33333
+      min-height: 10 * $base_size
+      padding: 23px 48px
+
+    &:hover,
+    &:focus
+      background: linear-gradient(180deg, #F7CB6B 0%, #FBA980 100%)
+      color: #020405
+
+.quiz-step
+  display: none
+  opacity: 0
+  transition: opacity 0.3s
+  width: 100%
+
+  &.is-active
+    display: block
+
+  &.visible
+    opacity: 1
+
+  &__inner
+    display: flex
+    flex-direction: column
+    min-height: 100%
+    padding-top: 10 * $base_size
+    padding-bottom: 12 * $base_size
+
+    @media(min-width: 1200px)
+      padding-top: 18 * $base_size
+      padding-bottom: 18 * $base_size
+
+    & > *
+      width: 100%
+
+  &__title
+    color: transparent
+    display: block
+    filter: drop-shadow(0 0 8px $gold-color)
+    -webkit-text-stroke: 1px $gold-color
+    text-stroke: 1px $gold-color
+    font-size: 3 * $base_size
+    font-weight: 900
+    line-height: 1.33333
+    letter-spacing: 2px
+    margin-bottom: 5 * $base_size
+    text-transform: uppercase
+    text-align: center
+
+    @media(min-width: 768px)
+      font-size: 4 * $base_size
+
+    @media(min-width: 1024px)
+      font-size: 5 * $base_size
+      line-height: 1.2
+
+    @media(min-width: 1200px)
+      font-size: 6 * $base_size
+      line-height: 1.16666
+      margin-bottom: 8 * $base_size
+
+    @media(min-width: 1400px)
+      font-size: 8 * $base_size
+
+    @media(min-width: 1900px)
+      font-size: 10 * $base_size
+      letter-spacing: 6px
+      line-height: 1.1
+
+  &__buttons
+    display: flex
+    justify-content: center
+    padding-left: 2 * $base_size
+    padding-right: 2 * $base_size
+
+    .quiz-step__btn
+      flex-grow: 1
+      margin-left: 1 * $base_size
+      margin-right: 1 * $base_size
+      max-width: 24.5 * $base_size
+      text-align: center
+      width: 50%
+
+      @media(min-width: 1200px)
+        min-height: 10 * $base_size
+        margin-left: 3 * $base_size
+        margin-right: 3 * $base_size
+
+      &:first-child
+        margin-left: 0
+
+      &:last-child
+        margin-right: 0
+
+  &__btn
+    align-items: center
+    background: linear-gradient(180deg, #FBA980 0%, #F7CB6B 100%)
+    box-shadow: 0px 0px 12px rgba(247, 203, 107, 0.3)
+    border: none
+    border-radius: 2px
+    color: #020405
+    cursor: pointer
+    display: inline-flex
+    font-size: 2 * $base_size
+    font-weight: 700
+    justify-content: center
+    line-height: 1.25
+    min-height: 6 * $base_size
+    text-align: center
+    text-decoration: none
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s
+    vertical-align: top
+
+    &:hover,
+    &:focus
+      background: linear-gradient(180deg, #F7CB6B 0%, #FBA980 100%)
+      color: #020405
+
+  &__options
+    margin-bottom: 3 * $base_size
+    margin-left: auto
+    margin-right: auto
+    max-width: 86 * $base_size
+    padding-left: 3 * $base_size
+    padding-right: 3 * $base_size
+
+  &__option
+    cursor: pointer
+    display: block
+
+    &:not(:last-child)
+      margin-bottom: 2 * $base_size
+
+    input
+      position: absolute
+      height: 1px
+      overflow: hidden
+      clip: rect(0 0 0 0)
+      width: 1px
+
+      &:checked + .quiz-step__option-inner
+        background-color: rgba(#fff, 0.25)
+        border-color: rgba(#fff, 0.25)
+
+        .quiz-step__option-icon
+          border-color: #fff
+
+          &::after
+            background-color: rgba(#fff, 0.7)
+            border-radius: 50%
+            content: ''
+            height: 1.25 * $base_size
+            left: 50%
+            position: absolute
+            top: 50%
+            transform: translate(-50%, -50%)
+            width: 1.25 * $base_size
+
+            @media(min-width: 1200px)
+              height: 2.25 * $base_size
+              width: 2.25 * $base_size
+
+  &__option-inner
+    align-items: center
+    border-radius: 2px
+    border: 2px solid rgba(#fff, 0.7)
+    color: #fff
+    display: flex
+    font-size: 2 * $base_size
+    line-height: 1.25
+    min-height: 6 * $base_size
+    padding: 1.75 * $base_size  2 * $base_size
+    transition: background-color 0.3s, border-color 0.3s
+
+    @media(min-width: 1200px)
+      font-size: 2.25 * $base_size
+      line-height: 1.11111
+      min-height: 8 * $base_size
+      padding: 2.5 * $base_size 2 * $base_size
+
+  &__option-icon
+    background-color: rgba(#fff, 0.1)
+    border: 2px solid rgba(#fff, 0.8)
+    border-radius: 50%
+    height: 2 * $base_size
+    margin-right: 2 * $base_size
+    position: relative
+    width: 2 * $base_size
+
+    @media(min-width: 1200px)
+      height: 3 * $base_size
+      width: 3 * $base_size
+
+  &__textarea-block
+    display: block
+    margin-top: auto
+    margin-left: auto
+    margin-right: auto
+    max-width: 86 * $base_size
+    padding-left: 3 * $base_size
+    padding-right: 3 * $base_size
+
+  &__textarea-title
+    color: #fff
+    display: block
+    font-size: 2.25 * $base_size
+    margin-bottom: 1.5 * $base_size
+
+  &__textarea
+    border: 2px solid rgba(#fff, 0.7)
+    border-radius: 2px
+    background-color: transparent
+    color: #fff
+    font-size: 1.5 * $base_size
+    height: 10 * $base_size
+    line-height: 1.75
+    padding: 2 * $base_size
+    resize: vertical
+    transition: border-color 0.3s
+    width: 100%
+
+    @media(min-width: 1200px)
+      font-size: 2.25 * $base_size
+      height: 15 * $base_size
+      padding: 1.5 * $base_size
+
+    &:hover,
+    &:focus
+      border-color: #fff
+
+    &::-webkit-input-placeholder
+      color: rgba(#fff, 0.7)
+      opacity: 1
+
+    &::-moz-placeholder
+      color: rgba(#fff, 0.7)
+      opacity: 1
+
+    &:-ms-input-placeholder
+      color: rgba(#fff, 0.7)
+      opacity: 1
+
+    &:focus::-webkit-input-placeholder
+      color: rgba(#fff, 0.3)
+      opacity: 1
+
+    &:focus::-moz-placeholder
+      color: rgba(#fff, 0.3)
+      opacity: 1
+
+    &:focus:-ms-input-placeholder
+      color: rgba(#fff, 0.3)
+      opacity: 1
+
+  &__btn-next-block
+    bottom: 6 * $base_size
+    height: 0
+    left: 0
+    position: fixed
+    right: 0
+    top: auto
+    text-align: center
+    z-index: 1
+
+    @media(min-width: 1200px)
+      bottom: 7 * $base_size
+
+  &__btn-next
+    transform: translateY(-50%)
+    width: 19.25 * $base_size
+
+    @media(min-width: 1200px)
+      min-height: 7 * $base_size
+      width: 20.5 * $base_size
+
+    &:hover,
+    &:focus
+      background: linear-gradient(180deg, #F7CB6B 0%, #FBA980 100%)
+      color: #020405
+
+  &__text
+    font-size: 2 * $base_size
+    font-weight: 300
+    line-height: 1.25
+    margin-bottom: 4 * $base_size
+    margin-left: auto
+    margin-right: auto
+    max-width: 360px
+    text-align: center
+
+    @media(min-width: 1200px)
+      font-size: 3 * $base_size
+      max-width: 800px
+
+  &__form
+    margin-left: auto
+    margin-right: auto
+    max-width: 300px
+    margin-bottom: 3 * $base_size
+
+  &__form-label
+    display: block
+    margin-bottom: 3 * $base_size
+
+    & + .quiz-step__from-checkbox
+      margin-top: 5 * $base_size
+
+  &__form-input
+    border: 2px solid rgba(#fff, 0.7)
+    border-radius: 2px
+    background-color: transparent
+    color: #fff
+    font-size: 2.25 * $base_size
+    height: 6 * $base_size
+    line-height: 1.33333
+    padding: 12px 16px
+    transition: border-color 0.3s
+    width: 100%
+
+    &:hover,
+    &:focus
+      border-color: #fff
+
+    &.error
+      border-color: $main_color
+      color: $main_color
+
+      &:focus
+        border-color: $main_color
+        color: rgba($main_color, 0.3)
+
+        &::-webkit-input-placeholder
+          color: rgba($main_color, 0.3)
+
+        &::-moz-placeholder
+          color: rgba($main_color, 0.3)
+
+        &:-ms-input-placeholder
+          color: rgba($main_color, 0.3)
+
+      &::-webkit-input-placeholder
+        color: $main_color
+
+      &::-moz-placeholder
+        color: $main_color
+
+      &:-ms-input-placeholder
+        color: $main_color
+
+    &::-webkit-input-placeholder
+      color: rgba(#fff, 0.7)
+      opacity: 1
+
+    &::-moz-placeholder
+      color: rgba(#fff, 0.7)
+      opacity: 1
+
+    &:-ms-input-placeholder
+      color: rgba(#fff, 0.7)
+      opacity: 1
+
+    &:focus::-webkit-input-placeholder
+      color: rgba(#fff, 0.3)
+      opacity: 1
+
+    &:focus::-moz-placeholder
+      color: rgba(#fff, 0.3)
+      opacity: 1
+
+    &:focus:-ms-input-placeholder
+      color: rgba(#fff, 0.3)
+      opacity: 1
+
+    &:disabled,
+    &.disabled
+      border-color: rgba(#fff, 0.3)
+      cursor: default
+      pointer-events: none
+
+      &:hover
+        border-color: rgba(#fff, 0.3)
+
+      &::-webkit-input-placeholder
+        color: rgba(#fff, 0.3)
+
+      &::-moz-placeholder
+        color: rgba(#fff, 0.3)
+
+      &:-ms-input-placeholder
+        color: rgba(#fff, 0.3)
+
+  &__from-checkbox
+    align-items: center
+    cursor: pointer
+    display: flex
+    font-size: 2 * $base_size
+    font-weight: 300
+    line-height: 1.25
+    margin-bottom: 2 * $base_size
+    position: relative
+
+    a
+      color: #fff
+      font-weight: 600
+      text-decoration: none
+      transition: color 0.3s
+
+      &:hover,
+      &:focus
+        color: $main_color
+        text-decoration: underline
+
+    input
+      position: absolute
+      height: 1px
+      overflow: hidden
+      clip: rect(0 0 0 0)
+      width: 1px
+
+      &:checked + .quiz-step__from-checkbox-icon
+        border-color: #fff
+
+        &::after
+          background-color: rgba(#fff, 0.7)
+          border-radius: 2px
+          content: ''
+          height: 2 * $base_size
+          left: 50%
+          position: absolute
+          top: 50%
+          transform: translate(-50%, -50%)
+          width: 2 * $base_size
+          z-index: 1
+
+  &__from-checkbox-icon
+    align-self: flex-start
+    border-radius: 2px
+    border: 2px solid rgba(#fff, 0.7)
+    background-color: rgba(#fff, 0.1)
+    height: 3 * $base_size
+    min-width: 3 * $base_size
+    margin-right: 2 * $base_size
+    position: relative
+    width: 3 * $base_size
+
+  &__form-submit-block
+    margin-top: 3 * $base_size
+    text-align: center
+
+  &__form-submit
+    width: 19.25 * $base_size
+
+    &:hover,
+    &:focus
+      background: linear-gradient(180deg, #F7CB6B 0%, #FBA980 100%)
+      color: #020405
+
+  &__note
+    font-size: 2 * $base_size
+    font-weight: 300
+    padding-left: 2 * $base_size
+    padding-right: 2 * $base_size
+    text-align: center
+
+  &__success
+    img
+      margin-left: auto
+      margin-right: auto
+      max-width: 260px
+
+      @media(min-width: 768px)
+        max-width: 350px
+
+.fancybox-slide--html
+  padding: 0
+  transform: none !important
+
+  .fancybox-close-small
+    opacity: 1
+    padding: 0

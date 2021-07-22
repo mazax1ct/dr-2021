@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>DIGITAL RAZOR - Квиз</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts_preload.html
+
+    //= template/style.html
+
+    <!--стили подключаемых на страние блоков-->
+    <link rel="stylesheet" href="css/main-banner.css" />
+    <link rel="stylesheet" href="css/action-banner.css" />
+    <link rel="stylesheet" href="css/quiz.css" />
+
+</head>
+
+<body class="dark" id="top">
+    //= template/sprite.html
+
+    //= template/header.html
+
+    <main class="wrapper">
+        <div class="main-banner">
+            <div class="main-banner__slide">
+                <div class="main-banner__slide-inner">
+                    <div id="quiz" class="action-banner">
+                        <div class="action-banner__container">
+                            <div class="action-banner__content">
+                                <div class="action-banner__content-inner">
+                                    <h1 class="action-banner__title"><span class="gold">ВЫИГРЫВАЙ<br> ПРИЗЫ&nbsp;КАЖДУЮ<br> НЕДЕЛЮ!</span></h1>
+                                    <div class="action-banner__image">
+                                        <picture>
+                                            <source srcset="images/content/quiz/banner.png, images/content/quiz/banner@2x.png 2x" media="(min-width: 768px)">
+                                            <img width="1180" height="1180" src="images/content/quiz/banner_mob.png" srcset="images/content/quiz/banner_mob@2x.png 2x" alt="alt">
+                                        </picture>
+                                    </div>
+                                    <div class="action-banner__text">
+                                        <p>Пройди короткий опрос и стань участником<br> розыгрыша игровых девайсов.</p>
+                                        <p>Раз в неделю среди участников опроса мы<br> разыграем один из игровых аксессуаров.</p>
+                                        <p><a class="js-quiz action-banner__btn btn btn--gold" href="javascript:void(0)">Участвую</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        #quiz {
+                            background: linear-gradient(106.89deg, rgba(87, 147, 234, 0.35) -0.5%, rgba(0, 0, 0, 0) 51.95%, rgba(87, 147, 234, 0.35) 100%), #020405;
+                        }
+                    </style>
+                </div>
+            </div>
+        </div>
+
+        <div id="quiz-popup" class="quiz-popup">
+            <div class="quiz-step is-active visible">
+                <div class="quiz-banner">
+                    <div class="quiz-banner__container">
+                        <div class="quiz-banner__content">
+                            <div class="quiz-banner__content-inner">
+                                <h1 class="quiz-banner__title"><span class="gold">ВЫИГРЫВАЙ<br> ПРИЗЫ&nbsp;КАЖДУЮ<br> НЕДЕЛЮ!</span></h1>
+                                <div class="quiz-banner__image">
+                                    <picture>
+                                        <source srcset="images/content/quiz/banner.png, images/content/quiz/banner@2x.png 2x" media="(min-width: 768px)">
+                                        <img width="1180" height="1180" src="images/content/quiz/banner_mob.png" srcset="images/content/quiz/banner_mob@2x.png 2x" alt="alt">
+                                    </picture>
+                                </div>
+                                <div class="quiz-banner__text">
+                                    <p>Пройди короткий опрос и стань участником<br> розыгрыша игровых девайсов.</p>
+                                    <p>Раз в неделю среди участников опроса мы<br> разыграем один из игровых аксессуаров.</p>
+                                    <p><a class="js-quiz-step quiz-banner__btn" href="javascript:void(0)" data-step="1">Участвую</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-step" data-step="1">
+                <div class="quiz-step__inner">
+                    <p class="quiz-step__title">Какой<br> видеокартой ты<br> пользуешься?</p>
+                    <div class="quiz-step__buttons">
+                        <a class="js-quiz-step quiz-step__btn" href="javascript:void(0)" data-step="2_1">AMD</a>
+                        <a class="js-quiz-step quiz-step__btn" href="javascript:void(0)" data-step="2_2">NVIDIA</a>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-step" data-step="2_1">
+                <div class="quiz-step__inner">
+                    <p class="quiz-step__title">Выбери поколение<br> твоей видеокарты</p>
+                    <div class="quiz-step__options">
+                        <label class="quiz-step__option">
+                            <input type="radio" name="amd_gen_1" value="1">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> AMD Radeon 6000 series</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="amd_gen_1" value="2">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> AMD Radeon 5000 series</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="amd_gen_1" value="3">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> AMD Radeon VEGA</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="amd_gen_1" value="4">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> AMD Radeon 500 series</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="amd_gen_1" value="5">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> AMD Radeon 400 series</span>
+                        </label>
+                    </div>
+                    <label class="quiz-step__textarea-block">
+                        <span class="quiz-step__textarea-title">Другое</span>
+                        <textarea class="quiz-step__textarea" placeholder="Твой вариант..."></textarea>
+                    </label>
+                    <div class="quiz-step__btn-next-block">
+                        <a class="js-quiz-step quiz-step__btn quiz-step__btn-next" href="javascript:void(0)" data-step="3_1">Отправить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-step" data-step="2_2">
+                <div class="quiz-step__inner">
+                    <p class="quiz-step__title">Выбери поколение<br> твоей видеокарты</p>
+                    <div class="quiz-step__options">
+                        <label class="quiz-step__option">
+                            <input type="radio" name="nvd_gen_1" value="1">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> NVIDIA GEFORCE RTX 30</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="nvd_gen_1" value="2">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> NVIDIA GEFORCE RTX 20</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="nvd_gen_1" value="3">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> NVIDIA GEFORCE GTX 16xx</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="nvd_gen_1" value="4">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> NVIDIA GEFORCE GTX 10</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="nvd_gen_1" value="5">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> NVIDIA GEFORCE GTX 900</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="nvd_gen_1" value="6">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> NVIDIA GEFORCE GTX 700</span>
+                        </label>
+                    </div>
+                    <label class="quiz-step__textarea-block">
+                        <span class="quiz-step__textarea-title">Другое</span>
+                        <textarea class="quiz-step__textarea" placeholder="Твой вариант..."></textarea>
+                    </label>
+                    <div class="quiz-step__btn-next-block">
+                        <a class="js-quiz-step quiz-step__btn quiz-step__btn-next" href="#" data-step="3_2">Отправить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-step" data-step="3_1">
+                <div class="quiz-step__inner">
+                    <p class="quiz-step__title">AMD Radeon 6000<br> series</p>
+                    <div class="quiz-step__options">
+                        <label class="quiz-step__option">
+                            <input type="radio" name="amd_gen_2" value="1">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> Radeon RX 6900 XT LC</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="amd_gen_2" value="2">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> Radeon RX 6900 XT</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="amd_gen_2" value="3">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> Radeon RX 6800 XT</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="amd_gen_2" value="4">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> Radeon RX 6800</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="amd_gen_2" value="5">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> Radeon RX 6700 XT</span>
+                        </label>
+                    </div>
+                    <div class="quiz-step__btn-next-block">
+                        <a class="js-quiz-step quiz-step__btn quiz-step__btn-next" href="#" data-step="4">Отправить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-step" data-step="3_2">
+                <div class="quiz-step__inner">
+                    <p class="quiz-step__title">NVIDIA GEFORCE 30<br> серия</p>
+                    <div class="quiz-step__options">
+                        <label class="quiz-step__option">
+                            <input type="radio" name="nvd_gen_2" value="1">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> GeForce RTX 3090</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="nvd_gen_2" value="2">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> GeForce RTX 3080 Ti</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="nvd_gen_1" value="3">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> GeForce RTX 3080</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="nvd_gen_2" value="4">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> GeForce RTX 3070 Ti</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="nvd_gen_2" value="5">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> GeForce RTX 3070</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="nvd_gen_2" value="6">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> GeForce RTX 3060 Ti</span>
+                        </label>
+                        <label class="quiz-step__option">
+                            <input type="radio" name="nvd_gen_2" value="7">
+                            <span class="quiz-step__option-inner"><span class="quiz-step__option-icon"></span> GeForce RTX 3060</span>
+                        </label>
+                    </div>
+                    <div class="quiz-step__btn-next-block">
+                        <a class="js-quiz-step quiz-step__btn quiz-step__btn-next" href="#" data-step="4">Отправить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-step" data-step="4">
+                <div class="quiz-step__inner">
+                    <p class="quiz-step__title">Поздравляем, ты в<br> игре!</p>
+                    <p class="quiz-step__text">Нам осталось отправить твой уникальный номер участника розыгрыша.</p>
+                    <form class="quiz-step__form">
+                        <label class="quiz-step__form-label">
+                            <input class="quiz-step__form-input" type="text" placeholder="Имя">
+                        </label>
+                        <label class="quiz-step__form-label">
+                            <input class="js-phone-mask quiz-step__form-input" type="text" placeholder="Телефон">
+                        </label>
+                        <label class="quiz-step__form-label">
+                            <input class="js-email-mask quiz-step__form-input" type="text" placeholder="Email">
+                        </label>
+                        <label class="quiz-step__from-checkbox">
+                            <input type="checkbox">
+                            <span class="quiz-step__from-checkbox-icon"></span>
+                            <span>Я даю согласие на обработку <a href="#" target="_blank">персональных данных</a></span>
+                        </label>
+                        <label class="quiz-step__from-checkbox">
+                            <input type="checkbox">
+                            <span class="quiz-step__from-checkbox-icon"></span>
+                            <span>Я ознакомлен(а) с <a href="#" target="_blank">правилами розыгрыша</a></span>
+                        </label>
+                        <div class="quiz-step__form-submit-block">
+                            <button class="js-quiz-step quiz-step__btn quiz-step__form-submit" type="submit" data-step="5">Отправить</button>
+                        </div>
+                    </form>
+                    <p class="quiz-step__note">Каждый участник может участвовать один раз и получить один приз из предложенных</p>
+                </div>
+            </div>
+
+            <div class="quiz-step" data-step="5">
+                <div class="quiz-step__inner">
+                    <p class="quiz-step__title">Ура! Проверь свою<br> электронную почту</p>
+                    <p class="quiz-step__success"><img width="350" height="350" src="images/content/quiz/success.svg" alt="alt"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    //= template/footer.html
+
+    <!--обязательные скрипты-->
+    //= template/scripts.html
+    <script src="js/blocks_js/quiz.js"></script>
+</body>
+
+</html>

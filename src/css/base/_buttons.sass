@@ -55,6 +55,7 @@
   cursor: pointer
   display: inline-flex
   font-weight: 700
+  justify-content: center
   text-decoration: none
   transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s
   vertical-align: top
@@ -134,3 +135,14 @@
 
     &:active
       box-shadow: 0 0 8px 0 rgba($main_color, 0.5)
+
+  &--gold
+    border: none
+    background: linear-gradient(180deg, #FBA980 0%, #F7CB6B 100%)
+    box-shadow: 0px 0px 12px rgba(247, 203, 107, 0.3)
+    color: #020405
+
+    &:hover,
+    &:focus
+      background: linear-gradient(180deg, #F7CB6B 0%, #FBA980 100%)
+      color: #020405

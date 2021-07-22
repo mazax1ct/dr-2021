@@ -127,13 +127,18 @@
       @media(min-width: 1900px)
         font-size: 10rem
         letter-spacing: 6px
-        line-height: 11rem
+        line-height: 1.1
 
       &:not(:last-child)
         margin-bottom: 1rem
 
         @media(min-width: 1900px)
           margin-bottom: 4rem
+
+      &.gold
+        filter: drop-shadow(0 0 8px $gold-color)
+        -webkit-text-stroke: 1px $gold-color
+        text-stroke: 1px $gold-color
 
     small
       color: #fff
