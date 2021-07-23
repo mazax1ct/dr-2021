@@ -1,4 +1,5 @@
 @import "base/_variables.sass"
+@import "base/fonts.sass"
 
 .quiz-popup
   background: linear-gradient(106.89deg, rgba(87, 147, 234, 0.35) -0.5%, rgba(0, 0, 0, 0) 51.95%, rgba(87, 147, 234, 0.35) 100%), #020405
@@ -357,6 +358,11 @@
     &:focus
       background: linear-gradient(180deg, #F7CB6B 0%, #FBA980 100%)
       color: #020405
+
+    &.disabled,
+    &:disabled
+      opacity: 0.5
+      pointer-events: none
 
   &__options
     margin-bottom: 3 * $base_size
