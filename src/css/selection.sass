@@ -10,6 +10,7 @@
 
   @media(min-width: 1900px)
     padding-top: 10rem
+    padding-bottom: 10rem
 
   &--type_1
     background-image: linear-gradient(#3A3C59, #0C1117)
@@ -34,6 +35,57 @@
 
       @media(min-width: 1900px)
         background-size: auto auto
+
+  &--type_2
+    .selection__subtitle-num
+      border-color: $blue_purple
+      box-shadow: 0 0 2px 0 $blue_purple
+
+    .selection__resolution
+      border-color: $blue_purple
+
+      &.is-active
+        background-color: $blue_purple
+
+        @media(min-width: 1024px)
+          background-color: transparent
+
+        &::after
+          @media(min-width: 1024px)
+            background-color: $blue_purple
+            box-shadow: 0 0 6px 0 $blue_purple
+
+    .cfg__discount
+      background: linear-gradient(266.43deg, #8F3DF7 1.32%, #000F8A 98.53%)
+
+    .cfg__fps
+      background: linear-gradient(180deg, #5B69FF 0%, #00C7FD 100%)
+
+    .cfg__btn,
+    .cfg__btn--red
+      border-color: $blue_purple
+
+      &:hover,
+      &:focus
+        border-color: $blue_purple
+        background-color: $blue_purple
+
+    .cfg__btn--red
+      background-color: $blue_purple
+
+    .cfg-slider
+      .slick-dots
+        li
+          &.slick-active
+            button
+              &::after
+                background-color: $blue_purple
+
+          button
+            z-index: 1
+
+            &::after
+              background-color: rgba($blue_purple, 0.5)
 
   &__container
     max-width: 45rem
@@ -770,6 +822,26 @@
       font-size: 3rem
       line-height: 1.16666
       top: 2rem
+
+  &__discount
+    border-radius: 0 4px 4px 0
+    color: #fff
+    font-size: 1.5rem
+    font-weight: 700
+    left: 0
+    line-height: 1.33333
+    margin: 0
+    padding: 1rem  2.5rem
+    position: absolute
+    top: 5rem
+    text-transform: uppercase
+    z-index: 3
+
+    @media(min-width: 768px)
+      font-size: 2rem
+      line-height: 1.25
+      padding: 1.5rem 2.25rem
+      top: 8rem
 
   &__fps
     background-color: $main_color

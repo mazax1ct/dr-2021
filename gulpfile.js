@@ -115,7 +115,7 @@ gulp.task("build", [
   "style:build",
   "plugins_style:build",
   "js:build",
-  "image:build",
+  //"image:build",
   "fonts:build"
 ]);
 
