@@ -755,7 +755,7 @@
             </div>
         </section>
 
-        <div class="selection selection--type_2">
+        <div class="selection-wrap">
             <div class="round" style="left: 15%; top: 10%; background: linear-gradient(180deg, rgba(143, 61, 247, 0.47) 0%, rgba(0, 15, 138, 0.47) 100%); width: 15.5vw"></div>
             <div class="round" style="left: -5%; top: 5%; background: linear-gradient(180deg, rgba(91, 105, 255, 0.21) 0%, rgba(0, 199, 253, 0.21) 100%); width: 23vw"></div>
             <div class="round" style="left: -10%; top: auto; bottom: 10%; background: linear-gradient(180deg, rgba(91, 105, 255, 0.48) 0%, rgba(0, 199, 253, 0.48) 100%); width: 25vw"></div>
@@ -765,431 +765,433 @@
             <div class="round" style="left: auto; right: 4%; top: 30%; background: rgba(143, 61, 247, 0.3); width: 24vw"></div>
             <div class="round" style="left: auto; right: -10%; top: auto; bottom: 20%; background: #1E2EB8; width: 18vw"></div>
 
-            <div class="selection__container">
-                <h2 class="selection__title">Выбери конфигурацию</h2>
-                <div class="selection__title-block selection__title-block--bordered">
-                    <h3 class="selection__subtitle"><span class="selection__subtitle-num">1</span> Выбери разрешение:</h3>
-                    <div class="selection__resolutions">
-                        <button class="selection__resolution is-active" type="button">1080P</button>
-                        <button class="selection__resolution" type="button">2K</button>
-                        <button class="selection__resolution" type="button">4K</button>
+            <div class="selection selection--type_2">
+                <div class="selection__container">
+                    <h2 class="selection__title">Выбери конфигурацию</h2>
+                    <div class="selection__title-block selection__title-block--bordered">
+                        <h3 class="selection__subtitle"><span class="selection__subtitle-num">1</span> Выбери разрешение:</h3>
+                        <div class="selection__resolutions">
+                            <button class="selection__resolution is-active" type="button">1080P</button>
+                            <button class="selection__resolution" type="button">2K</button>
+                            <button class="selection__resolution" type="button">4K</button>
+                        </div>
+                        <a class="selection__options-link" href="#" title="Настройки">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#gear" />
+                            </svg>
+                        </a>
                     </div>
-                    <a class="selection__options-link" href="#" title="Настройки">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#gear" />
-                        </svg>
-                    </a>
+                    <div class="selection__title-block">
+                        <h3 class="selection__subtitle"><span class="selection__subtitle-num">2</span> Выбери игру:</h3>
+                        <button class="js-info selection__info" type="button" title="Информация">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#info" />
+                            </svg>
+                            <span class="selection__info-popover">Полученные показатели FPS являются усредненными и служат для демонстрации относительной производительности систем на максимальных настройках графики.</span>
+                        </button>
+                    </div>
+                    <div class="selection-design">
+                        <div class="selection-design__list-item">
+                            <input id="design_1" class="selection-design__radio" name="design" type="radio" value="1" checked>
+                            <label class="selection-design__item" for="design_1">
+                                <span><img width="249" height="145" src="images/content/selection/game_1.jpg" srcset="images/content/selection/game_1@2x.jpg" alt="alt"></span>
+                            </label>
+                        </div>
+                        <div class="selection-design__list-item">
+                            <input id="design_2" class="selection-design__radio" name="design" type="radio" value="2">
+                            <label class="selection-design__item" for="design_2">
+                                <span><img width="249" height="145" src="images/content/selection/game_2.jpg" srcset="images/content/selection/game_2@2x.jpg" alt="alt"></span>
+                            </label>
+                        </div>
+                        <div class="selection-design__list-item">
+                            <input id="design_3" class="selection-design__radio" name="design" type="radio" value="3">
+                            <label class="selection-design__item" for="design_3">
+                                <span><img width="249" height="145" src="images/content/selection/game_3.jpg" srcset="images/content/selection/game_3@2x.jpg" alt="alt"></span>
+                            </label>
+                        </div>
+                        <div class="selection-design__list-item">
+                            <input id="design_4" class="selection-design__radio" name="design" type="radio" value="4">
+                            <label class="selection-design__item" for="design_4">
+                                <span><img width="249" height="145" src="images/content/selection/game_4.jpg" srcset="images/content/selection/game_4@2x.jpg" alt="alt"></span>
+                            </label>
+                        </div>
+                        <div class="selection-design__list-item">
+                            <input id="design_5" class="selection-design__radio" name="design" type="radio" value="5">
+                            <label class="selection-design__item" for="design_5">
+                                <span><img width="249" height="145" src="images/content/selection/game_5.jpg" srcset="images/content/selection/game_5@2x.jpg" alt="alt"></span>
+                            </label>
+                        </div>
+                        <div class="selection-design__list-item">
+                            <input id="design_6" class="selection-design__radio" name="design" type="radio" value="6">
+                            <label class="selection-design__item" for="design_6">
+                                <span><img width="249" height="145" src="images/content/selection/game_3.jpg" srcset="images/content/selection/game_3@2x.jpg" alt="alt"></span>
+                            </label>
+                        </div>
+                        <div class="selection-design__list-item">
+                            <input id="design_7" class="selection-design__radio" name="design" type="radio" value="7">
+                            <label class="selection-design__item" for="design_7">
+                                <span><img width="249" height="145" src="images/content/selection/game_6.jpg" srcset="images/content/selection/game_6@2x.jpg" alt="alt"></span>
+                            </label>
+                        </div>
+                        <div class="selection-design__list-item">
+                            <input id="design_8" class="selection-design__radio" name="design" type="radio" value="8">
+                            <label class="selection-design__item" for="design_8">
+                                <span><img width="249" height="145" src="images/content/selection/game_7.jpg" srcset="images/content/selection/game_7@2x.jpg" alt="alt"></span>
+                            </label>
+                        </div>
+                        <div class="selection-design__list-item">
+                            <input id="design_9" class="selection-design__radio" name="design" type="radio" value="9">
+                            <label class="selection-design__item" for="design_9">
+                                <span><img width="249" height="145" src="images/content/selection/game_6.jpg" srcset="images/content/selection/game_6@2x.jpg" alt="alt"></span>
+                            </label>
+                        </div>
+                        <div class="selection-design__list-item">
+                            <input id="design_10" class="selection-design__radio" name="design" type="radio" value="10">
+                            <label class="selection-design__item" for="design_10">
+                                <span><img width="249" height="145" src="images/content/selection/game_4.jpg" srcset="images/content/selection/game_4@2x.jpg" alt="alt"></span>
+                            </label>
+                        </div>
+                        <div class="selection-design__list-item">
+                            <input id="design_11" class="selection-design__radio" name="design" type="radio" value="11">
+                            <label class="selection-design__item" for="design_11">
+                                <span><img width="249" height="145" src="images/content/selection/game_5.jpg" srcset="images/content/selection/game_5@2x.jpg" alt="alt"></span>
+                            </label>
+                        </div>
+                        <div class="selection-design__list-item">
+                            <input id="design_12" class="selection-design__radio" name="design" type="radio" value="12">
+                            <label class="selection-design__item" for="design_12">
+                                <span><img width="249" height="145" src="images/content/selection/game_1.jpg" srcset="images/content/selection/game_1@2x.jpg" alt="alt"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <h3 class="selection__subtitle"><span class="selection__subtitle-num">3</span> Выбери конфигурацию:</h3>
                 </div>
-                <div class="selection__title-block">
-                    <h3 class="selection__subtitle"><span class="selection__subtitle-num">2</span> Выбери игру:</h3>
-                    <button class="js-info selection__info" type="button" title="Информация">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#info" />
-                        </svg>
-                        <span class="selection__info-popover">Полученные показатели FPS являются усредненными и служат для демонстрации относительной производительности систем на максимальных настройках графики.</span>
-                    </button>
-                </div>
-                <div class="selection-design">
-                    <div class="selection-design__list-item">
-                        <input id="design_1" class="selection-design__radio" name="design" type="radio" value="1" checked>
-                        <label class="selection-design__item" for="design_1">
-                            <span><img width="249" height="145" src="images/content/selection/game_1.jpg" srcset="images/content/selection/game_1@2x.jpg" alt="alt"></span>
-                        </label>
-                    </div>
-                    <div class="selection-design__list-item">
-                        <input id="design_2" class="selection-design__radio" name="design" type="radio" value="2">
-                        <label class="selection-design__item" for="design_2">
-                            <span><img width="249" height="145" src="images/content/selection/game_2.jpg" srcset="images/content/selection/game_2@2x.jpg" alt="alt"></span>
-                        </label>
-                    </div>
-                    <div class="selection-design__list-item">
-                        <input id="design_3" class="selection-design__radio" name="design" type="radio" value="3">
-                        <label class="selection-design__item" for="design_3">
-                            <span><img width="249" height="145" src="images/content/selection/game_3.jpg" srcset="images/content/selection/game_3@2x.jpg" alt="alt"></span>
-                        </label>
-                    </div>
-                    <div class="selection-design__list-item">
-                        <input id="design_4" class="selection-design__radio" name="design" type="radio" value="4">
-                        <label class="selection-design__item" for="design_4">
-                            <span><img width="249" height="145" src="images/content/selection/game_4.jpg" srcset="images/content/selection/game_4@2x.jpg" alt="alt"></span>
-                        </label>
-                    </div>
-                    <div class="selection-design__list-item">
-                        <input id="design_5" class="selection-design__radio" name="design" type="radio" value="5">
-                        <label class="selection-design__item" for="design_5">
-                            <span><img width="249" height="145" src="images/content/selection/game_5.jpg" srcset="images/content/selection/game_5@2x.jpg" alt="alt"></span>
-                        </label>
-                    </div>
-                    <div class="selection-design__list-item">
-                        <input id="design_6" class="selection-design__radio" name="design" type="radio" value="6">
-                        <label class="selection-design__item" for="design_6">
-                            <span><img width="249" height="145" src="images/content/selection/game_3.jpg" srcset="images/content/selection/game_3@2x.jpg" alt="alt"></span>
-                        </label>
-                    </div>
-                    <div class="selection-design__list-item">
-                        <input id="design_7" class="selection-design__radio" name="design" type="radio" value="7">
-                        <label class="selection-design__item" for="design_7">
-                            <span><img width="249" height="145" src="images/content/selection/game_6.jpg" srcset="images/content/selection/game_6@2x.jpg" alt="alt"></span>
-                        </label>
-                    </div>
-                    <div class="selection-design__list-item">
-                        <input id="design_8" class="selection-design__radio" name="design" type="radio" value="8">
-                        <label class="selection-design__item" for="design_8">
-                            <span><img width="249" height="145" src="images/content/selection/game_7.jpg" srcset="images/content/selection/game_7@2x.jpg" alt="alt"></span>
-                        </label>
-                    </div>
-                    <div class="selection-design__list-item">
-                        <input id="design_9" class="selection-design__radio" name="design" type="radio" value="9">
-                        <label class="selection-design__item" for="design_9">
-                            <span><img width="249" height="145" src="images/content/selection/game_6.jpg" srcset="images/content/selection/game_6@2x.jpg" alt="alt"></span>
-                        </label>
-                    </div>
-                    <div class="selection-design__list-item">
-                        <input id="design_10" class="selection-design__radio" name="design" type="radio" value="10">
-                        <label class="selection-design__item" for="design_10">
-                            <span><img width="249" height="145" src="images/content/selection/game_4.jpg" srcset="images/content/selection/game_4@2x.jpg" alt="alt"></span>
-                        </label>
-                    </div>
-                    <div class="selection-design__list-item">
-                        <input id="design_11" class="selection-design__radio" name="design" type="radio" value="11">
-                        <label class="selection-design__item" for="design_11">
-                            <span><img width="249" height="145" src="images/content/selection/game_5.jpg" srcset="images/content/selection/game_5@2x.jpg" alt="alt"></span>
-                        </label>
-                    </div>
-                    <div class="selection-design__list-item">
-                        <input id="design_12" class="selection-design__radio" name="design" type="radio" value="12">
-                        <label class="selection-design__item" for="design_12">
-                            <span><img width="249" height="145" src="images/content/selection/game_1.jpg" srcset="images/content/selection/game_1@2x.jpg" alt="alt"></span>
-                        </label>
-                    </div>
-                </div>
-                <h3 class="selection__subtitle"><span class="selection__subtitle-num">3</span> Выбери конфигурацию:</h3>
-            </div>
-            <div class="selection__slider-container">
-                <div class="js-cfg-slider cfg-slider">
-                    <div class="cfg-slider__slide">
-                        <div class="cfg">
-                            <div class="cfg__image-block">
-                                <p class="cfg__title">progaming s</p>
-                                <p class="cfg__discount">Скидка 5%</p>
-                                <img width="345" height="331" src="images/content/selection/cfg_2.png" srcset="images/content/selection/cfg_2@2x.png 2x" alt="alt">
-                                <p class="cfg__fps">144 fps</p>
-                            </div>
-                            <div class="cfg__info">
-                                <a class="cfg__btn" href="#">Конфигуратор</a>
-                                <div class="cfg__parts">
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_cpu" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Процессор:</p>
-                                            <p class="cfg__part-description">6-ядерный AMD Ryzen 5 3500X 3.60&nbsp;GHz</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_ram" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Оперативная память:</p>
-                                            <p class="cfg__part-description">8GB (2x4Gb) DDR4 2400Mhz</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_gpu" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Видеокарта:</p>
-                                            <p class="cfg__part-description">AMD Radeon 5500 XT 8G</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_ssd" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Системный SSD:</p>
-                                            <p class="cfg__part-description">SSD M.2 240GB</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_hdd" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Накопитель 1:</p>
-                                            <p class="cfg__part-description">-</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_hdd" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Накопитель 2:</p>
-                                            <p class="cfg__part-description">Жесткий диск 1TB</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_guarantee" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Гарантия:</p>
-                                            <p class="cfg__part-description">1 год</p>
-                                        </div>
-                                    </div>
+                <div class="selection__slider-container">
+                    <div class="js-cfg-slider cfg-slider">
+                        <div class="cfg-slider__slide">
+                            <div class="cfg">
+                                <div class="cfg__image-block">
+                                    <p class="cfg__title">progaming s</p>
+                                    <p class="cfg__discount">Скидка 5%</p>
+                                    <img width="345" height="331" src="images/content/selection/cfg_2.png" srcset="images/content/selection/cfg_2@2x.png 2x" alt="alt">
+                                    <p class="cfg__fps">144 fps</p>
                                 </div>
-                                <a class="cfg__btn cfg__btn--red" href="javascript:void(0)" data-fancybox="paramSelectorFPSpopup_1" data-src="#paramSelectorFPSpopup">Помощь в выборе</a>
+                                <div class="cfg__info">
+                                    <a class="cfg__btn" href="#">Конфигуратор</a>
+                                    <div class="cfg__parts">
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_cpu" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Процессор:</p>
+                                                <p class="cfg__part-description">6-ядерный AMD Ryzen 5 3500X 3.60&nbsp;GHz</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_ram" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Оперативная память:</p>
+                                                <p class="cfg__part-description">8GB (2x4Gb) DDR4 2400Mhz</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_gpu" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Видеокарта:</p>
+                                                <p class="cfg__part-description">AMD Radeon 5500 XT 8G</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_ssd" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Системный SSD:</p>
+                                                <p class="cfg__part-description">SSD M.2 240GB</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_hdd" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Накопитель 1:</p>
+                                                <p class="cfg__part-description">-</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_hdd" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Накопитель 2:</p>
+                                                <p class="cfg__part-description">Жесткий диск 1TB</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_guarantee" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Гарантия:</p>
+                                                <p class="cfg__part-description">1 год</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="cfg__btn cfg__btn--red" href="javascript:void(0)" data-fancybox="paramSelectorFPSpopup_1" data-src="#paramSelectorFPSpopup">Помощь в выборе</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cfg-slider__slide">
+                            <div class="cfg">
+                                <div class="cfg__image-block">
+                                    <p class="cfg__title">progaming s</p>
+                                    <p class="cfg__discount">Скидка 5%</p>
+                                    <img width="345" height="331" src="images/content/selection/cfg_2.png" srcset="images/content/selection/cfg_2@2x.png 2x" alt="alt">
+                                    <p class="cfg__fps">144 fps</p>
+                                </div>
+                                <div class="cfg__info">
+                                    <a class="cfg__btn" href="#">Конфигуратор</a>
+                                    <div class="cfg__parts">
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_cpu" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Процессор:</p>
+                                                <p class="cfg__part-description">6-ядерный AMD Ryzen 5 3500X 3.60&nbsp;GHz</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_ram" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Оперативная память:</p>
+                                                <p class="cfg__part-description">8GB (2x4Gb) DDR4 2400Mhz</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_gpu" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Видеокарта:</p>
+                                                <p class="cfg__part-description">AMD Radeon 5500 XT 8G</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_ssd" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Системный SSD:</p>
+                                                <p class="cfg__part-description">SSD M.2 240GB</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_hdd" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Накопитель 1:</p>
+                                                <p class="cfg__part-description">-</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_hdd" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Накопитель 2:</p>
+                                                <p class="cfg__part-description">Жесткий диск 1TB</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_guarantee" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Гарантия:</p>
+                                                <p class="cfg__part-description">1 год</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="cfg__btn cfg__btn--red" href="javascript:void(0)" data-fancybox="paramSelectorFPSpopup_2" data-src="#paramSelectorFPSpopup">Помощь в выборе</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cfg-slider__slide">
+                            <div class="cfg">
+                                <div class="cfg__image-block">
+                                    <p class="cfg__title">progaming s</p>
+                                    <p class="cfg__discount">Скидка 5%</p>
+                                    <img width="345" height="331" src="images/content/selection/cfg_2.png" srcset="images/content/selection/cfg_2@2x.png 2x" alt="alt">
+                                    <p class="cfg__fps">144 fps</p>
+                                </div>
+                                <div class="cfg__info">
+                                    <a class="cfg__btn" href="#">Конфигуратор</a>
+                                    <div class="cfg__parts">
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_cpu" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Процессор:</p>
+                                                <p class="cfg__part-description">6-ядерный AMD Ryzen 5 3500X 3.60&nbsp;GHz</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_ram" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Оперативная память:</p>
+                                                <p class="cfg__part-description">8GB (2x4Gb) DDR4 2400Mhz</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_gpu" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Видеокарта:</p>
+                                                <p class="cfg__part-description">AMD Radeon 5500 XT 8G</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_ssd" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Системный SSD:</p>
+                                                <p class="cfg__part-description">SSD M.2 240GB</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_hdd" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Накопитель 1:</p>
+                                                <p class="cfg__part-description">-</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_hdd" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Накопитель 2:</p>
+                                                <p class="cfg__part-description">Жесткий диск 1TB</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_guarantee" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Гарантия:</p>
+                                                <p class="cfg__part-description">1 год</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="cfg__btn cfg__btn--red" href="javascript:void(0)" data-fancybox="paramSelectorFPSpopup_3" data-src="#paramSelectorFPSpopup">Помощь в выборе</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cfg-slider__slide">
+                            <div class="cfg">
+                                <div class="cfg__image-block">
+                                    <p class="cfg__title">progaming s</p>
+                                    <p class="cfg__discount">Скидка 5%</p>
+                                    <img width="345" height="331" src="images/content/selection/cfg_2.png" srcset="images/content/selection/cfg_2@2x.png 2x" alt="alt">
+                                    <p class="cfg__fps">144 fps</p>
+                                </div>
+                                <div class="cfg__info">
+                                    <a class="cfg__btn" href="#">Конфигуратор</a>
+                                    <div class="cfg__parts">
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_cpu" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Процессор:</p>
+                                                <p class="cfg__part-description">6-ядерный AMD Ryzen 5 3500X 3.60&nbsp;GHz</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_ram" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Оперативная память:</p>
+                                                <p class="cfg__part-description">8GB (2x4Gb) DDR4 2400Mhz</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_gpu" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Видеокарта:</p>
+                                                <p class="cfg__part-description">AMD Radeon 5500 XT 8G</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_ssd" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Системный SSD:</p>
+                                                <p class="cfg__part-description">SSD M.2 240GB</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_hdd" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Накопитель 1:</p>
+                                                <p class="cfg__part-description">-</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_hdd" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Накопитель 2:</p>
+                                                <p class="cfg__part-description">Жесткий диск 1TB</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfg__part">
+                                            <span class="cfg__part-icon"><svg aria-hidden="true">
+                                                    <use xlink:href="#p_guarantee" /></svg></span>
+                                            <div class="cfg__part-info">
+                                                <p class="cfg__part-title">Гарантия:</p>
+                                                <p class="cfg__part-description">1 год</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="cfg__btn cfg__btn--red" href="javascript:void(0)" data-fancybox="paramSelectorFPSpopup_4" data-src="#paramSelectorFPSpopup">Помощь в выборе</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="cfg-slider__slide">
-                        <div class="cfg">
-                            <div class="cfg__image-block">
-                                <p class="cfg__title">progaming s</p>
-                                <p class="cfg__discount">Скидка 5%</p>
-                                <img width="345" height="331" src="images/content/selection/cfg_2.png" srcset="images/content/selection/cfg_2@2x.png 2x" alt="alt">
-                                <p class="cfg__fps">144 fps</p>
-                            </div>
-                            <div class="cfg__info">
-                                <a class="cfg__btn" href="#">Конфигуратор</a>
-                                <div class="cfg__parts">
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_cpu" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Процессор:</p>
-                                            <p class="cfg__part-description">6-ядерный AMD Ryzen 5 3500X 3.60&nbsp;GHz</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_ram" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Оперативная память:</p>
-                                            <p class="cfg__part-description">8GB (2x4Gb) DDR4 2400Mhz</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_gpu" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Видеокарта:</p>
-                                            <p class="cfg__part-description">AMD Radeon 5500 XT 8G</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_ssd" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Системный SSD:</p>
-                                            <p class="cfg__part-description">SSD M.2 240GB</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_hdd" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Накопитель 1:</p>
-                                            <p class="cfg__part-description">-</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_hdd" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Накопитель 2:</p>
-                                            <p class="cfg__part-description">Жесткий диск 1TB</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_guarantee" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Гарантия:</p>
-                                            <p class="cfg__part-description">1 год</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a class="cfg__btn cfg__btn--red" href="javascript:void(0)" data-fancybox="paramSelectorFPSpopup_2" data-src="#paramSelectorFPSpopup">Помощь в выборе</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cfg-slider__slide">
-                        <div class="cfg">
-                            <div class="cfg__image-block">
-                                <p class="cfg__title">progaming s</p>
-                                <p class="cfg__discount">Скидка 5%</p>
-                                <img width="345" height="331" src="images/content/selection/cfg_2.png" srcset="images/content/selection/cfg_2@2x.png 2x" alt="alt">
-                                <p class="cfg__fps">144 fps</p>
-                            </div>
-                            <div class="cfg__info">
-                                <a class="cfg__btn" href="#">Конфигуратор</a>
-                                <div class="cfg__parts">
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_cpu" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Процессор:</p>
-                                            <p class="cfg__part-description">6-ядерный AMD Ryzen 5 3500X 3.60&nbsp;GHz</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_ram" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Оперативная память:</p>
-                                            <p class="cfg__part-description">8GB (2x4Gb) DDR4 2400Mhz</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_gpu" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Видеокарта:</p>
-                                            <p class="cfg__part-description">AMD Radeon 5500 XT 8G</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_ssd" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Системный SSD:</p>
-                                            <p class="cfg__part-description">SSD M.2 240GB</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_hdd" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Накопитель 1:</p>
-                                            <p class="cfg__part-description">-</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_hdd" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Накопитель 2:</p>
-                                            <p class="cfg__part-description">Жесткий диск 1TB</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_guarantee" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Гарантия:</p>
-                                            <p class="cfg__part-description">1 год</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a class="cfg__btn cfg__btn--red" href="javascript:void(0)" data-fancybox="paramSelectorFPSpopup_3" data-src="#paramSelectorFPSpopup">Помощь в выборе</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cfg-slider__slide">
-                        <div class="cfg">
-                            <div class="cfg__image-block">
-                                <p class="cfg__title">progaming s</p>
-                                <p class="cfg__discount">Скидка 5%</p>
-                                <img width="345" height="331" src="images/content/selection/cfg_2.png" srcset="images/content/selection/cfg_2@2x.png 2x" alt="alt">
-                                <p class="cfg__fps">144 fps</p>
-                            </div>
-                            <div class="cfg__info">
-                                <a class="cfg__btn" href="#">Конфигуратор</a>
-                                <div class="cfg__parts">
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_cpu" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Процессор:</p>
-                                            <p class="cfg__part-description">6-ядерный AMD Ryzen 5 3500X 3.60&nbsp;GHz</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_ram" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Оперативная память:</p>
-                                            <p class="cfg__part-description">8GB (2x4Gb) DDR4 2400Mhz</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_gpu" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Видеокарта:</p>
-                                            <p class="cfg__part-description">AMD Radeon 5500 XT 8G</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_ssd" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Системный SSD:</p>
-                                            <p class="cfg__part-description">SSD M.2 240GB</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_hdd" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Накопитель 1:</p>
-                                            <p class="cfg__part-description">-</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_hdd" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Накопитель 2:</p>
-                                            <p class="cfg__part-description">Жесткий диск 1TB</p>
-                                        </div>
-                                    </div>
-                                    <div class="cfg__part">
-                                        <span class="cfg__part-icon"><svg aria-hidden="true">
-                                                <use xlink:href="#p_guarantee" /></svg></span>
-                                        <div class="cfg__part-info">
-                                            <p class="cfg__part-title">Гарантия:</p>
-                                            <p class="cfg__part-description">1 год</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a class="cfg__btn cfg__btn--red" href="javascript:void(0)" data-fancybox="paramSelectorFPSpopup_4" data-src="#paramSelectorFPSpopup">Помощь в выборе</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </div>
-            <div id="paramSelectorFPSpopup" class="popup">
-                <p class="popup__title">ПОМОЩЬ В ВЫБОРЕ</p>
-                <p class="popup__text text-center">Наши сотрудники свяжутся с Вами в течении 30 минут в рабочее время с 9:30 до 20:00</p>
+                <div id="paramSelectorFPSpopup" class="popup">
+                    <p class="popup__title">ПОМОЩЬ В ВЫБОРЕ</p>
+                    <p class="popup__text text-center">Наши сотрудники свяжутся с Вами в течении 30 минут в рабочее время с 9:30 до 20:00</p>
 
-                <form class="help-form" action="" method="">
-                    <div class="help-form__row">
-                        <div class="help-form__row-cell">
-                            <label class="help-form__label">
-                                <input class="input error" type="text" name="" value="" placeholder="ФИО">
-                            </label>
-                            <label class="help-form__label">
-                                <input class="js-phone-mask input" type="text" value="" placeholder="Телефон">
-                            </label>
+                    <form class="help-form" action="" method="">
+                        <div class="help-form__row">
+                            <div class="help-form__row-cell">
+                                <label class="help-form__label">
+                                    <input class="input error" type="text" name="" value="" placeholder="ФИО">
+                                </label>
+                                <label class="help-form__label">
+                                    <input class="js-phone-mask input" type="text" value="" placeholder="Телефон">
+                                </label>
+                            </div>
+                            <div class="help-form__row-cell">
+                                <label class="help-form__label">
+                                    <input class="input" type="text" name="" value="" placeholder="Email">
+                                </label>
+                                <label class="help-form__label">
+                                    <input class="input" type="text" value="" placeholder="Компания">
+                                </label>
+                            </div>
                         </div>
-                        <div class="help-form__row-cell">
-                            <label class="help-form__label">
-                                <input class="input" type="text" name="" value="" placeholder="Email">
-                            </label>
-                            <label class="help-form__label">
-                                <input class="input" type="text" value="" placeholder="Компания">
-                            </label>
-                        </div>
-                    </div>
-                    <label class="help-form__textarea-label">
-                        <textarea class="textarea" placeholder="Опишите здесь задачи и пожелания"></textarea>
-                    </label>
-                    <div class="help-form__captcha">
+                        <label class="help-form__textarea-label">
+                            <textarea class="textarea" placeholder="Опишите здесь задачи и пожелания"></textarea>
+                        </label>
+                        <div class="help-form__captcha">
 
-                    </div>
-                    <div class="help-form__button-block">
-                        <button class="help-form__submit btn" type="submit">Отправить</button>
-                    </div>
-                </form>
+                        </div>
+                        <div class="help-form__button-block">
+                            <button class="help-form__submit btn" type="submit">Отправить</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -1323,10 +1325,10 @@
         </section>
 
         <section class="page-section page-section--type_4">
-            <div class="round" style="left: -5%; top: 7%; background: linear-gradient(180deg, rgba(91, 105, 255, 0.5) 0%, rgba(0, 199, 253, 0.5) 100%); width: 21vw"></div>
+            <div class="round" style="left: -5%; top: 17%; background: linear-gradient(180deg, rgba(91, 105, 255, 0.5) 0%, rgba(0, 199, 253, 0.5) 100%); width: 21vw"></div>
             <div class="round" style="left: 15%; top: auto; bottom: 5%; background: linear-gradient(180deg, rgba(143, 61, 247, 0.21) 0%, rgba(0, 15, 138, 0.21) 100%); width: 26vw"></div>
 
-            <div class="round" style="left: auto; right: -10%; top: 5%; background: rgba(30, 46, 184, 0.42); width: 37vw"></div>
+            <div class="round" style="left: auto; right: -10%; top: 10%; background: rgba(30, 46, 184, 0.42); width: 37vw"></div>
             <div class="round" style="left: auto; right: -5%; top: auto; bottom: 10%; background: #00C7FD; width: 14vw"></div>
 
             <div class="action-terms action-terms--type_4">
@@ -1424,20 +1426,6 @@
 
     <script src="js/blocks_js/info-popover.js"></script>
     <script src="js/blocks_js/cfg-slider.js"></script>
-
-    <script>
-        /*if ($('body').width() > 1199) {
-            let parallax = document.querySelectorAll('.round');
-
-            parallax.forEach(function(el) {
-                window.addEventListener('mousemove', function(e) {
-                    let x = e.clientX / (window).innerWidth;
-                    let y = e.clientY / window.innerHeight;
-                    el.style.transform = 'translate(' + x * 70 + 'px, ' + y * 70 + 'px)';
-                });
-            });
-        }*/
-    </script>
 </body>
 
 </html>
