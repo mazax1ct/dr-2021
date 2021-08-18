@@ -810,8 +810,8 @@
     left: 0
     margin: 0
     position: absolute
-    padding-left: 1.5rem
-    padding-right: 1.5rem
+    padding-left: 1rem
+    padding-right: 1rem
     top: 1rem
     text-align: center
     text-transform: uppercase
@@ -819,9 +819,14 @@
     z-index: 3
 
     @media(min-width: 768px)
-      font-size: 3rem
+      font-size: 2.5rem
       line-height: 1.16666
       top: 2rem
+
+    @media(min-width: 1900px)
+      font-size: 3rem
+      padding-left: 1.5rem
+      padding-right: 1.5rem
 
   &__discount
     border-radius: 0 4px 4px 0
