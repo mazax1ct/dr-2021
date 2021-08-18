@@ -14,6 +14,11 @@
   padding: 0 !important
   width: 100%
 
+  @media(min-width: 1024px)
+    height: 90%
+    max-width: 1620px
+    width: 90%
+
   @media(min-width: 1900px)
     font-size: 2.25 * $base_size
 
@@ -269,7 +274,7 @@
     padding-top: 10 * $base_size
     padding-bottom: 12 * $base_size
 
-    @media(min-width: 1200px)
+    @media(min-width: 1900px)
       padding-top: 18 * $base_size
       padding-bottom: 18 * $base_size
 
@@ -511,7 +516,7 @@
     z-index: 1
 
     @media(min-width: 1200px)
-      bottom: 7 * $base_size
+      bottom: 11 * $base_size
 
   &__btn-next
     transform: translateY(-50%)
@@ -726,3 +731,8 @@
   .fancybox-close-small
     opacity: 1
     padding: 0
+
+.fancybox-is-open
+  .fancybox-bg
+    background-color: rgba(0,0,0,0.7)
+    opacity: 1
