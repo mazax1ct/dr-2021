@@ -21,6 +21,46 @@
     padding-top: 0
     padding-bottom: 0
 
+  &--type_1
+    padding-top: 4rem
+    padding-bottom: 4rem
+
+    @media(min-width: 768px)
+      padding-top: 5rem
+      padding-bottom: 5rem
+
+    @media(min-width: 1024px)
+      padding-top: 7rem
+      padding-bottom: 7rem
+
+    @media(min-width: 1900px)
+      min-height: 0
+      padding-top: 8rem
+      padding-bottom: 8rem
+
+    @media(min-width: 2500px)
+      padding-top: 10rem
+      padding-bottom: 10rem
+
+    .info-block__container
+      @media(min-width: 768px)
+        grid-template-columns: 1fr 1.1fr
+
+    .info-block__title
+      margin-top: 0
+
+    .info-block__title,
+    .info-block__text
+      padding-right: 0
+      padding-left: 0
+
+      @media(min-width: 2500px)
+        max-width: 860px
+
+    .info-block__text
+      @media(min-width: 1024px)
+        max-width: 80%
+
   &__container
     margin-left: auto
     margin-right: auto
@@ -63,16 +103,18 @@
       padding-right: 9rem
 
     @media(min-width: 1280px)
+      font-size: 4rem
       margin-top: 9rem
 
     @media(min-width: 1900px)
-      font-size: 6rem
-      line-height: 1.16666
+      font-size: 5rem
       margin-bottom: 6rem
       margin-top: 17rem
       padding-right: 17.5rem
 
     @media(min-width: 2500px)
+      font-size: 6rem
+      line-height: 1.16666
       margin-top: 30rem
       padding-left: 8rem
       padding-right: 8rem
@@ -106,6 +148,8 @@
       padding-right: 17.5rem
 
     @media(min-width: 2500px)
+      font-size: 3rem
+      line-height: 1.33333
       padding-left: 8rem
       padding-right: 8rem
 

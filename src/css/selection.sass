@@ -87,6 +87,51 @@
             &::after
               background-color: rgba($blue_purple, 0.5)
 
+  &--type_3
+    .selection__subtitle-num
+      border-color: $gold-color
+      box-shadow: 0 0 2px 0 $gold-color
+
+    .selection__resolution
+      border-color: $gold-color
+
+      &.is-active
+        background-color: $gold-color
+
+        @media(min-width: 1024px)
+          background-color: transparent
+
+        &::after
+          @media(min-width: 1024px)
+            background-color: $gold-color
+            box-shadow: 0 0 6px 0 $gold-color
+
+    .cfg__btn,
+    .cfg__btn--red
+      border-color: $gold-color
+
+      &:hover,
+      &:focus
+        border-color: $gold-color
+        background-color: $gold-color
+
+    .cfg__btn--red
+      background-color: $gold-color
+
+    .cfg-slider
+      .slick-dots
+        li
+          &.slick-active
+            button
+              &::after
+                background-color: $gold-color
+
+          button
+            z-index: 1
+
+            &::after
+              background-color: rgba($gold-color, 0.5)
+
   &__container
     max-width: 45rem
     margin-left: auto
@@ -830,6 +875,7 @@
 
   &__discount
     border-radius: 0 4px 4px 0
+    background-color: $main_color
     color: #fff
     font-size: 1.5rem
     font-weight: 700

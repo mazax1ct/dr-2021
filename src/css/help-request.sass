@@ -9,10 +9,13 @@
     padding-top: 10rem
 
   @media(min-width: 2500px)
-    min-height: 1170px
+    min-height: 900px
     padding-top: 16.5rem
 
   &--type_1
+    @media(min-width: 2500px)
+      min-height: 1170px
+
     .help-request__title
       span
         filter: drop-shadow(0.5px 0.5px 3px $ocean_wave)
@@ -26,6 +29,24 @@
       &:hover,
       &:focus
         background-color: rgba($ocean_wave, 0.5)
+
+      &:active
+        background-color: transparent
+
+  &--type_2
+    .help-request__title
+      span
+        filter: drop-shadow(0.5px 0.5px 3px $gold-color)
+        -webkit-text-stroke: 1px $gold-color
+        text-stroke: 1px $gold-color
+
+    .help-request__form-submit
+      background-color: $gold-color
+      border-color: $gold-color
+
+      &:hover,
+      &:focus
+        background-color: rgba($gold-color, 0.5)
 
       &:active
         background-color: transparent
