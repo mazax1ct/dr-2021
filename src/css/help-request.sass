@@ -16,6 +16,9 @@
     @media(min-width: 2500px)
       min-height: 1170px
 
+    .help-request__container
+      align-items: flex-end
+
     .help-request__title
       span
         filter: drop-shadow(0.5px 0.5px 3px $ocean_wave)
@@ -52,9 +55,19 @@
         background-color: transparent
 
   &__container
+    max-width: 114rem
+
     @media(min-width: 768px)
-      align-items: flex-end
       display: flex
+
+    @media(min-width: 1200px)
+      max-width: 140rem
+
+    @media(min-width: 1400px)
+      max-width: 170rem
+
+    @media(min-width: 1900px)
+      max-width: 220rem
 
   &__text-block
     margin-bottom: 6rem
@@ -67,6 +80,9 @@
       text-align: left
 
     @media(min-width: 1024px)
+      padding-right: 40px
+
+    @media(min-width: 1900px)
       padding-right: 80px
 
   &__title
@@ -127,12 +143,11 @@
       line-height: 1.33333
       text-transform: uppercase
 
-      @media(min-width: 414px)
+      @media(min-width: 1024px)
         font-size: 3rem
 
-      @media(min-width: 1024px)
+      @media(min-width: 1400px)
         font-size: 4rem
-        font-weight: 700
         line-height: 1.5
 
   &__text
